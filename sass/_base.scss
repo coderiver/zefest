@@ -6,3 +6,20 @@
 $experimental-support-for-svg: true;
 // global sprites
 $icons: sprite-map("icons/*.png", $spacing: 10px);
+$logos: sprite-map("logos/*.png", $spacing: 10px);
+@mixin pts_r{
+    font-weight: normal;
+    font-family: 'pt_sansregular', sans-serif;
+}
+@mixin pts_i{
+    font-weight: normal;
+    font-family: 'pt_sansitalic', sans-serif;
+}
+@mixin pts_b{
+    font-weight: normal;
+    font-family: 'pt_sansbold', sans-serif;
+}
+@mixin pts_bi{
+    font-weight: normal;
+    font-family: 'pt_sansbold_italic', sans-serif;
+}

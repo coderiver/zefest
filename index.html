@@ -5,13 +5,52 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
 </head>
 <body>
-<!-- BEGIN  out-->
-<div class="out">
-	<h1>hello bro</h1>
-	<img src="http://placekitten.com/120/120" alt="">
+<div class="l-layout">
+    <header class="header">
+        <div class="l-container">
+            <a class="logo" href="#"></a>
+            <div class="lang">
+                <a href="#" class="lang__rus"></a>
+                <a href="#" class="lang__eng"></a>
+            </div>
+            <div class="contact">
+                <div class="contact__tel">
+                    <i class="icon icon_phone"></i>
+                    <span>
+                        <strong>+7 (495) 971-81-51</strong>
+                        9:00 — 20:00 (Московское время)
+                    </span>
+                </div>
+                <div class="contact__skype">
+                    <i class="icon icon_skype"></i>
+                    zelfinans
+                </div>
+            </div>
+            <div class="enter-cab">
+                <div class="enter-cab__inf">
+                    <strong class="enter-cab__name">Вениамин Адабашьянченко</strong>
+                    <a class="enter-cab__link" href="#">
+                        <i class="icon icon_cab"></i>Личный кабинет
+                    </a>
+                    <a class="enter-cab__message" href="#">
+                        <i class="icon icon_message"></i>
+                        <span>5</span>
+                        Новых сообщений
+                    </a>
+                </div>
+                <button class="btn-simple">Выйти</button>
+            </div>
+        </div>
+    </header>
+    <div class="push"></div>
 </div>
-<!-- END out-->
+<footer class="footer"></footer>
 </body>
 </html>

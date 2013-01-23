@@ -1,3 +1,13 @@
+.wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+@font-face { font-family: 'pt_sansregular'; src: url("../fonts/pts55f-webfont.eot"); src: url("../fonts/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pts55f-webfont.woff") format("woff"), url("../fonts/pts55f-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'pt_sansitalic'; src: url("../fonts/pts56f-webfont.eot"); src: url("../fonts/pts56f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pts56f-webfont.woff") format("woff"), url("../fonts/pts56f-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'pt_sansbold'; src: url("../fonts/pts75f-webfont.eot"); src: url("../fonts/pts75f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pts75f-webfont.woff") format("woff"), url("../fonts/pts75f-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'pt_sansbold_italic'; src: url("../fonts/pts76f-webfont.eot"); src: url("../fonts/pts76f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pts76f-webfont.woff") format("woff"), url("../fonts/pts76f-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
 /* ------------------------------------- Reset css -------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
@@ -5,7 +15,7 @@ body, html { height: 100%; }
 
 img, fieldset { border: none; }
 
-input[type="submit"] { cursor: pointer; }
+input[type="submit"], button { cursor: pointer; }
 
 input[type='submit']::-moz-focus-inner { padding: 0; border: 0; }
 
@@ -26,15 +36,64 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
-body { font-family: Arial,sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; }
+body { font-weight: normal; font-family: 'pt_sansregular', sans-serif; font-size: 15px; line-height: 1.4; background: url(../img/body-bg.png) 0 0 repeat; }
 
-a { color: #00919e; }
+a { color: #75922e; font-size: 13px; }
 a:hover { text-decoration: none; }
+
+.l-container { margin: 0 auto; padding: 0 10px; width: 990px; }
+
+.l-wrapper { margin: 0 auto -100px; position: relative; min-height: 100%; height: auto !important; height: 100%; }
+
+.push { clear: both; height: 100px; }
+
+.wrapper { overflow: hidden; }
 
 /* ------------------------------------ //END Main styles --------------------------------------- */
 /* ----------------------------------------- Header --------------------------------------------- */
+.header { position: relative; padding: 35px 0; background: #fff; }
+.header:after { content: ""; position: absolute; bottom: -4px; left: 0; width: 100%; height: 4px; background: url(../img/header-bg.png) 0 0 repeat; }
+.header .l-container { overflow: hidden; position: relative; }
+
+.logo { float: left; margin-right: 125px; background: url('../img/logos-sbe54f6cddd.png') 0 0 no-repeat; width: 288px; height: 64px; }
+
+.lang { position: absolute; left: 64px; top: 45px; z-index: 2; padding: 10px 0 0 25px; width: 185px; line-height: 30px; }
+.lang a { float: left; margin-right: 6px; }
+
+.lang__rus { background: url('../img/icons-s2ac7338106.png') 0 -112px no-repeat; width: 16px; height: 11px; }
+
+.lang__eng { background: url('../img/icons-s2ac7338106.png') 0 0 no-repeat; width: 16px; height: 11px; }
+
+.contact { float: left; padding-top: 7px; color: #666565; font-size: 13px; }
+
+.contact__tel i { float: left; margin-right: 8px; }
+.contact__tel span { display: block; overflow: hidden; }
+.contact__tel strong { display: block; margin: -4px 0; font-size: 18px; font-weight: normal; font-weight: normal; font-family: 'pt_sansbold', sans-serif; color: #000; }
+
+.contact__skype i { margin: 0 4px 0 2px; vertical-align: middle; }
+
+.enter-cab { float: right; overflow: hidden; }
+.enter-cab div { float: left; }
+.enter-cab .btn-simple { float: right; }
+
+.enter-cab__name { color: #303030; font-size: 15px; font-weight: normal; font-family: 'pt_sansbold_italic', sans-serif; }
+
 /* -------------------------------------- //END Header ------------------------------------------ */
 /* ------------------------------------- Independent blocks -------------------------------------- */
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
+.icon { display: inline-block; }
+
+.icon_phone { background: url('../img/icons-s2ac7338106.png') 0 -21px no-repeat; width: 13px; height: 33px; }
+
+.icon_skype { background: url('../img/icons-s2ac7338106.png') 0 -90px no-repeat; width: 13px; height: 12px; }
+
+.icon_cab { background: url('../img/icons-s2ac7338106.png') 0 -64px no-repeat; width: 22px; height: 16px; }
+
+.icon_message { background: url('../img/icons-s2ac7338106.png') 0 -133px no-repeat; width: 22px; height: 21px; }
+
+.btn-simple { display: inline-block; padding: 0 13px; height: 20px; line-height: 20px; text-align: center; color: #303030; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 12px; background: #fff; border: 1px solid #c1c5c6; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; }
+.btn-simple:hover { opacity: 0.8; }
+.btn-simple:active { -webkit-box-shadow: inset 0 -1px 3px rgba(0, 0, 0, 0.1); -moz-box-shadow: inset 0 -1px 3px rgba(0, 0, 0, 0.1); box-shadow: inset 0 -1px 3px rgba(0, 0, 0, 0.1); }
+
 /* ----------------------------------------- Footer ---------------------------------------------- */
 /* -------------------------------------- //END Footer ------------------------------------------- */

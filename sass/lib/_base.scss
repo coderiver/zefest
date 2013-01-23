@@ -51,26 +51,26 @@ $break-large: 1180px;
     text-shadow: none;
     color: transparent;
 }
-// %clr{
-//   &:after{
-//     content: ".";
-//     display: block;
-//     height: 0;
-//     clear: both;
-//     visibility: hidden;
-//     }
-// }
 %clr{
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
+  &:after{
+    content: ".";
+    display: block;
+    height: 0;
     clear: both;
-  }
-  *zoom: 1;
+    visibility: hidden;
+    }
 }
+// %clr{
+//   &:before,
+//   &:after {
+//     content: " ";
+//     display: table;
+//   }
+//   &:after {
+//     clear: both;
+//   }
+//   *zoom: 1;
+// }
 // placeholder color
 @mixin placeholder-color($color) {
   &.placeholder {

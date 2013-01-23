@@ -1,27 +1,43 @@
 @import "base";
-// =======Sprites
-// .whatever{
-// 	@include sized-sprite($icons, badge_hit);
-// 	@include retina{
-// 		@include sized-sprite($icons, badge_new);
-// 	}
-// }
-// =======animation example
-// @include keyframes(rotate) {
-//    from {
-//       @include rotate(0);
-//    }
-//    to {
-//       @include rotate(360);
-//    }
-// }
-// body:hover{
-// 	@include animation(rotate 200s linear infinite);
-// }
-// ========gradient example
-// body{
-// @include background-image(linear-gradient(#232323, #5c5c5c));
-// }
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('../fonts/pts55f-webfont.eot');
+    src: url('../fonts/pts55f-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pts55f-webfont.woff') format('woff'),
+         url('../fonts/pts55f-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pt_sansitalic';
+    src: url('../fonts/pts56f-webfont.eot');
+    src: url('../fonts/pts56f-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pts56f-webfont.woff') format('woff'),
+         url('../fonts/pts56f-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pt_sansbold';
+    src: url('../fonts/pts75f-webfont.eot');
+    src: url('../fonts/pts75f-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pts75f-webfont.woff') format('woff'),
+         url('../fonts/pts75f-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pt_sansbold_italic';
+    src: url('../fonts/pts76f-webfont.eot');
+    src: url('../fonts/pts76f-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pts76f-webfont.woff') format('woff'),
+         url('../fonts/pts76f-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* ------------------------------------- Reset css -------------------------------------------- */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
 h6, p, blockquote, pre,a, abbr, acronym, address, big,
@@ -31,16 +47,16 @@ dd, ol, ul, li,fieldset, form, label, legend,table, caption,
 tbody, tfoot, thead, tr, th, td,article, aside, canvas, details,
 embed, figure, figcaption, footer, header, hgroup, menu, nav,
 output, ruby, section, summary,time, mark, audio, video { 
- margin: 0;
- padding: 0;
- border: 0;
- vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
 }
 body, html {
     height: 100%
 }
 img,fieldset {border:none;}
-input[type="submit"] {cursor:pointer;}
+input[type="submit"], button {cursor:pointer;}
 input[type='submit']::-moz-focus-inner{padding:0;border:0}
 textarea {overflow: auto;}
 input {
@@ -58,7 +74,7 @@ ul,ol {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header,
 hgroup, menu, nav, section { 
- display: block;
+    display: block;
 }
 table {
     border-spacing: 0;
@@ -68,28 +84,167 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-	font: {
-	    family: Arial,sans-serif;
-	    weight: normal;
-	    size: 12px;
-	  	}
-	line-height:1.4;
+	@include pts_r;
+    font-size: 15px;
+	line-height: 1.4;
+    background: url(../img/body-bg.png) 0 0 repeat;
 }
-
+    
 a{
-	color:#00919e;
+	color: #75922e;
+    font-size: 13px;
 	&:hover{
 		text-decoration:none;
 	}
 }
-
+.l-container {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 990px;
+}
+    
+.l-wrapper {
+    margin: 0 auto -100px;
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+.push {
+    clear: both;
+    height: 100px;
+} 
+.wrapper {
+    overflow: hidden;
+}
+.wrap {
+    @extend %clr;
+}
 /* ------------------------------------ //END Main styles --------------------------------------- */
-
+ 
 /* ----------------------------------------- Header --------------------------------------------- */
+.header {
+    position: relative;
+    padding: 35px 0;
+    background: #fff;
+    &:after {
+       content: "";
+       position: absolute;
+       bottom: -4px;
+       left: 0;
+       width: 100%; 
+       height: 4px;
+       background: url(../img/header-bg.png) 0 0 repeat;
+    }
+    .l-container {
+        overflow: hidden; 
+        position: relative;
+    }
+
+}
+.logo {
+    float: left;
+    margin-right: 125px;
+    @include sized-sprite($logos, logo);
+}
+.lang {
+    position: absolute;
+    left: 64px;
+    top: 45px;
+    z-index: 2;
+    padding: 10px 0 0 25px;
+    width: 185px;
+    line-height: 30px;
+    a {
+        float: left;
+        margin-right: 6px;
+    }
+}
+.lang__rus {
+    @include sized-sprite($icons, rus);
+}
+.lang__eng {
+    @include sized-sprite($icons, eng);
+}
+.contact {
+    float: left;
+    padding-top: 7px;
+    color: #666565;
+    font-size: 13px;
+}
+.contact__tel {
+    i {
+        float: left;
+        margin-right: 8px;
+    }
+    span {
+        display: block;
+        overflow: hidden;
+    }
+    strong {
+        display: block;
+        margin: -4px 0;
+        font-size: 18px;
+        font-weight: normal;
+        @include pts_b;
+        color: #000;
+    }
+}
+.contact__skype {
+    i {
+        margin: 0 4px 0 2px;
+        vertical-align: middle;
+    }
+}
+.enter-cab {
+    float: right;
+    overflow: hidden;
+    div {
+        float: left;
+    }
+    .btn-simple {
+        float: right;
+    }
+}
+.enter-cab__name {
+    color: #303030;
+    font-size: 15px;
+    @include pts_bi;
+}
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
+// icons
+.icon {
+    display: inline-block;
+}
+.icon_phone {@include sized-sprite($icons, phone);}
+.icon_skype {@include sized-sprite($icons, skype);}
+.icon_cab {@include sized-sprite($icons, cab);}
+.icon_message {@include sized-sprite($icons, message);}
+
+// buttons
+.btn-simple {
+    display: inline-block;
+    padding: 0 13px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #303030;
+    @include pts_b;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #c1c5c6;
+    @include border-radius(2px);
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        @include box-shadow(inset 0 -1px 3px rgba(0,0,0,0.1));
+    }
+}
+
 /* ----------------------------------------- Footer ---------------------------------------------- */
-/* -------------------------------------- //END Footer ------------------------------------------- */
+/* -------------------------------------- //END Footer ------------------------------------------- */ 
