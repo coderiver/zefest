@@ -104,7 +104,7 @@ a{
 }
     
 .l-wrapper {
-    margin: 0 auto -100px;
+    margin: 0 auto -124px;
     position: relative;
     min-height: 100%;
     height: auto !important;
@@ -112,13 +112,19 @@ a{
 }
 .push {
     clear: both;
-    height: 100px;
+    height: 124px;
 } 
 .wrapper {
     overflow: hidden;
 }
 .wrap {
     @extend %clr;
+}
+.title-l-1 {
+    @include pts_b;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
@@ -152,7 +158,7 @@ a{
     left: 64px;
     top: 45px;
     z-index: 2;
-    padding: 10px 0 0 25px;
+    padding: 8px 0 0 25px;
     width: 185px;
     line-height: 30px;
     a {
@@ -165,6 +171,9 @@ a{
 }
 .lang__eng {
     @include sized-sprite($icons, eng);
+}
+.lang__active {
+    opacity: .4;
 }
 .contact {
     float: left;
@@ -199,17 +208,37 @@ a{
 .enter-cab {
     float: right;
     overflow: hidden;
-    div {
-        float: left;
-    }
     .btn-simple {
         float: right;
+        margin-left: 12px;
+    }
+}
+.enter-cab__inf {
+    float: left;
+    .icon {
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+    a {
+        color: #666565;
     }
 }
 .enter-cab__name {
+    display: block;
+    margin-bottom: -6px;
     color: #303030;
     font-size: 15px;
     @include pts_bi;
+}
+.enter-cab__message {
+    position: relative;
+    span {
+        position: absolute;
+        left: 0;
+        top: -2px;
+        width: 22px;
+        text-align: center;
+    }
 }
 /* -------------------------------------- //END Header ------------------------------------------ */
 
@@ -224,6 +253,7 @@ a{
 .icon_skype {@include sized-sprite($icons, skype);}
 .icon_cab {@include sized-sprite($icons, cab);}
 .icon_message {@include sized-sprite($icons, message);}
+.icon_close {@include sized-sprite($icons, close);}
 
 // buttons
 .btn-simple {
@@ -245,6 +275,95 @@ a{
         @include box-shadow(inset 0 -1px 3px rgba(0,0,0,0.1));
     }
 }
+.soc {
+    a {
+       display: inline-block; 
+       margin: 0 7px 2px 0;
+    }
+}
+.vk {@include sized-sprite($icons, vk);}
+.odn {@include sized-sprite($icons, odn);}
+.lj {@include sized-sprite($icons, lj);}
+.tw {@include sized-sprite($icons, tw);}
+.fb {@include sized-sprite($icons, fb);}
+.g {@include sized-sprite($icons, g);}
+.ln {@include sized-sprite($icons, ln);} 
 
+.popup {
+    display: none;
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    margin-left: -440px;
+    width: 880px;
+    border: 20px solid rgba(0,0,0,0.3);
+    @include border-radius(7px)
+}
+.popup__wrap {
+    position: relative;
+    padding: 30px 60px;
+    background: #fff;
+    overflow: hidden;
+    @include box-shadow(0 0 20px rgba(0,59,73,0.5));
+    .title-l-1 {
+        text-align: center;
+    }
+    .icon_close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+    }
+}
+.popup__col {
+    float: left;
+    width: 235px;
+    .soc {
+        margin-top: 36px;
+    }
+}
+.popup__title {
+    font-size: 20px;
+    @include pts_b;
+}
 /* ----------------------------------------- Footer ---------------------------------------------- */
+.footer {
+    position: relative;
+    height: 124px;
+    font-size: 13px;
+    background: #d6e2e5 url(../img/footer-bg.png) 0 0 repeat;
+    &:after {
+       content: "";
+       position: absolute;
+       top: -4px;
+       left: 0;
+       width: 100%; 
+       height: 4px;
+       background: url(../img/footer-bg-top.png) 0 0 repeat;
+    }
+    .l-container {
+        padding-top: 53px;
+    }
+}
+.footer__nav {
+    float: left;
+    overflow: hidden;
+    li {
+        float: left;
+        margin-right: 16px;
+    }
+    a {
+        color: #474747;
+    }
+}
+.copyright {
+    float: right;
+    color: #7e898e;
+    strong {
+        color: #75922e;
+        font-weight: normal;
+        @include pts_b;
+        text-transform: uppercase;
+    }
+}
 /* -------------------------------------- //END Footer ------------------------------------------- */ 

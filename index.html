@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>Index</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/common.js"></script>  
@@ -12,12 +12,12 @@
     <![endif]-->
 </head>
 <body>
-<div class="l-layout">
+<div class="l-wrapper">
     <header class="header">
         <div class="l-container">
             <a class="logo" href="#"></a>
             <div class="lang">
-                <a href="#" class="lang__rus"></a>
+                <a href="#" class="lang__active lang__rus"></a>
                 <a href="#" class="lang__eng"></a>
             </div>
             <div class="contact">
@@ -34,23 +34,61 @@
                 </div>
             </div>
             <div class="enter-cab">
-                <div class="enter-cab__inf">
+                <!-- <div class="enter-cab__inf">
                     <strong class="enter-cab__name">Вениамин Адабашьянченко</strong>
-                    <a class="enter-cab__link" href="#">
-                        <i class="icon icon_cab"></i>Личный кабинет
-                    </a>
+                    <div>
+                        <a href="#">
+                            <i class="icon icon_cab"></i>Личный кабинет
+                        </a>
+                    </div>
                     <a class="enter-cab__message" href="#">
                         <i class="icon icon_message"></i>
                         <span>5</span>
                         Новых сообщений
                     </a>
                 </div>
-                <button class="btn-simple">Выйти</button>
+                <button class="btn-simple">Выйти</button> -->
+                <button class="btn-simple js-enter">Войти/Регистрация</button>
             </div>
         </div>
     </header>
     <div class="push"></div>
 </div>
-<footer class="footer"></footer>
+<footer class="footer">
+    <div class="l-container wrap">
+        <nav class="footer__nav">
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Программы сотрудничества</a></li>
+                <li><a href="#">Деловое сотрудничество</a></li>
+                <li><a href="#">Правовая помощь</a></li>
+                <li><a href="#">Контактная информация</a></li>           
+            </ul>
+        </nav>
+        <div class="copyright">© 2005—2012 <strong>Зелфинанс</strong></div>
+    </div>
+</footer>
+<div class="popup js-popup-enter">
+    <div class="popup__wrap">
+        <h1 class="title-l-1">Вход / регистрация</h1>
+        <div class="popup__col">
+            <h2 class="popup__title">Войти через соцсеть</h2>
+            <div class="soc">
+                <a href="#" class="vk"></a>
+                <a href="#" class="odn"></a>
+                <a href="#" class="lj"></a>
+                <a href="#" class="tw"></a>
+                <a href="#" class="fb"></a>
+                <a href="#" class="g"></a>
+                <a href="#" class="ln"></a>
+            </div>    
+        </div>
+        <div class="popup__col"></div>
+        <div class="popup__col"></div>
+        <i class="icon icon_close js-close-popup"></i>
+    </div>
+</div>
 </body>
 </html>
