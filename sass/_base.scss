@@ -23,3 +23,11 @@ $logos: sprite-map("logos/*.png", $spacing: 10px);
     font-weight: normal;
     font-family: 'pt_sansbold_italic', sans-serif;
 }
+@mixin mp_r {
+    font-weight: normal;
+    font-family: 'Myriad pro', sans-serif;
+}
+@mixin mp_b {
+    font-weight: bold;
+    font-family: 'Myriad pro', sans-serif;
+}

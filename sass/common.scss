@@ -100,7 +100,7 @@ a{
 .l-container {
     margin: 0 auto;
     padding: 0 10px;
-    width: 990px;
+    width: 980px;
 }
     
 .l-wrapper {
@@ -131,6 +131,7 @@ a{
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
     position: relative;
+    margin-bottom: 35px;
     padding: 35px 0;
     background: #fff;
     &:after {
@@ -242,19 +243,212 @@ a{
 }
 /* -------------------------------------- //END Header ------------------------------------------ */
 
+/* -------------------------------------------- Menu -------------------------------------------- */
+.menu {
+    position: relative;
+    z-index: 4000;
+    height: 50px;
+    background: #abc765;
+    border-bottom: 9px solid #92aa5a;
+    @extend %clr;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #bed783;
+    }
+    li {
+        position: relative;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        &:hover {
+            background: #92b244;
+            @include transition( all, .2s, linear);
+            .submenu {
+                display: block;
+            }
+        }
+        .icon_arr1 {
+            margin-left: 9px;
+        }
+    }
+    a {
+        display: block;
+        padding: 0 23px 0 20px;
+        height: 50px;
+        color: #fff;
+        @include pts_b; 
+        font-size: 17px;
+        text-decoration: none;
+    }
+}
+.menu__home {
+    a {
+        padding: 0;
+        width: 60px;
+        background: url(../img/icons/home.png) 50% 50% no-repeat;
+    }
+}
+.submenu { 
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding-top: 1px;
+    width: 285px;
+    background: #92b244;
+    border-bottom: 9px solid #92aa5a;
+    li {
+       float: none;
+       width: 100%;
+       height: 46px;
+       line-height: 46px;
+       border-top: 1px solid #a8c26b;
+       @include box-shadow(0 -1px 0 #829d42);
+       &:hover {
+           background: #abc765;
+           @include transition( all, .2s, linear);
+       }
+    }
+    a { 
+        height: 46px;
+        @include mp_r;
+        font-size: 17px;
+    }
+}
+/* ---------------------------------------- //END Header ---------------------------------------- */
+
 /* ------------------------------------- Independent blocks -------------------------------------- */
-/* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 // icons
 .icon {
     display: inline-block;
 }
 .icon_phone {@include sized-sprite($icons, phone);}
-.icon_skype {@include sized-sprite($icons, skype);}
+.icon_skype {@include sized-sprite($icons, skype);} 
 .icon_cab {@include sized-sprite($icons, cab);}
 .icon_message {@include sized-sprite($icons, message);}
 .icon_close {@include sized-sprite($icons, close);}
+.icon_arr1 {@include sized-sprite($icons, arr1);}
+.icon_nav1 {@include sized-sprite($icons, nav1);}
+.icon_nav2 {@include sized-sprite($icons, nav2);}
+.icon_nav3 {@include sized-sprite($icons, nav3);}
+.icon_nav4 {@include sized-sprite($icons, nav4);}
+.icon_prev {@include sized-sprite($icons, prev);}
+.icon_next {@include sized-sprite($icons, next);}
 
+
+.soc {
+    a {
+       display: inline-block; 
+       margin: 0 7px 2px 0;
+    }
+}
+.vk {@include sized-sprite($icons, vk);}
+.odn {@include sized-sprite($icons, odn);}
+.lj {@include sized-sprite($icons, lj);}
+.tw {@include sized-sprite($icons, tw);}
+.fb {@include sized-sprite($icons, fb);}
+.g {@include sized-sprite($icons, g);}
+.ln {@include sized-sprite($icons, ln);} 
+
+
+
+.nav {
+    width: 295px;
+    a {
+        position: relative;
+        display: block;
+        padding: 14px 10px 13px 35px;
+        overflow: hidden;
+        color: #fff;
+        background: #85c5ec;
+        border-top: 1px solid #9bd3f6;
+        border-bottom: 1px solid #6aa9d9;
+        text-decoration: none;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -133px;
+            left: 26px;
+            width: 83%;
+            height: 130px;
+            @include border-radius(50%);
+            @include box-shadow(0 0 70px rgba(62,140,207,1)); 
+        }
+        &:hover {
+            &:after {
+                content: "";
+                @include box-shadow(none); 
+            }
+        }
+        .icon {
+            margin-right: 38px;
+            vertical-align: middle;
+        }
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 175px;
+            @include pts_i;
+            font-size: 15px;
+            line-height: 1;
+            strong {
+                display: block;
+                @include pts_b;
+                font-size: 18px;
+                text-transform: uppercase;
+                text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+            }
+        }
+    }
+}
+
+// form
+.input {
+    margin-bottom: 15px;
+    label {
+        display: block;
+        margin-bottom: 6px;
+        color: #666565;
+        font-size: 13px;
+    }
+    input {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 6px;
+        width: 100%; 
+        height: 24px;
+        color: #303030;
+        @include pts_r;
+        border: 1px solid #c1c5c6;
+        border-top: 1px solid #838a8e;
+        @include border-radius(3px);
+        &:focus {
+           border-top: 1px solid #c1c5c6; 
+        }
+    }
+}
+.input_s {
+    width: 233px;
+}
+.ckeckbox {
+    display: block;
+    margin: -3px 0 15px;
+    color: #666565;
+    font-size: 13px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    * {
+        vertical-align: middle;
+    }
+}
 // buttons
 .btn-simple {
     display: inline-block;
@@ -275,25 +469,33 @@ a{
         @include box-shadow(inset 0 -1px 3px rgba(0,0,0,0.1));
     }
 }
-.soc {
-    a {
-       display: inline-block; 
-       margin: 0 7px 2px 0;
+.btn {
+    height: 20px;
+    padding: 0 26px;
+    color: #fff;
+    @include pts_b;
+    text-align: center;
+    border-top: 1px solid #b4dbf3;
+    border-bottom: 2px solid #3375b1;
+    @include border-radius(2px);
+    @include box-shadow(0 -1px 0 #73bce9);
+    @include background-image(linear-gradient(#73bce9, #5fa5e5));
+    &:hover {
+        @include background-image(linear-gradient(#5fa5e5, #73bce9));
+    }
+    &:active {
+        border-bottom: 2px solid #73bce9;
+        @include background-image(linear-gradient(#5fa5e5, #73bce9));
     }
 }
-.vk {@include sized-sprite($icons, vk);}
-.odn {@include sized-sprite($icons, odn);}
-.lj {@include sized-sprite($icons, lj);}
-.tw {@include sized-sprite($icons, tw);}
-.fb {@include sized-sprite($icons, fb);}
-.g {@include sized-sprite($icons, g);}
-.ln {@include sized-sprite($icons, ln);} 
 
+// popup
 .popup {
     display: none;
     position: absolute;
     top: 270px;
     left: 50%;
+    z-index: 5000;
     margin-left: -440px;
     width: 880px;
     border: 20px solid rgba(0,0,0,0.3);
@@ -306,6 +508,7 @@ a{
     overflow: hidden;
     @include box-shadow(0 0 20px rgba(0,59,73,0.5));
     .title-l-1 {
+        margin-bottom: 35px;
         text-align: center;
     }
     .icon_close {
@@ -317,7 +520,7 @@ a{
 }
 .popup__col {
     float: left;
-    width: 235px;
+    width: 33%; 
     .soc {
         margin-top: 36px;
     }
@@ -326,6 +529,8 @@ a{
     font-size: 20px;
     @include pts_b;
 }
+/* ---------------------------------- //END Independent blocks ----------------------------------- */
+
 /* ----------------------------------------- Footer ---------------------------------------------- */
 .footer {
     position: relative;

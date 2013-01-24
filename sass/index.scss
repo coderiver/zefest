@@ -1,1 +1,126 @@
 @import "base";
+.wrap-scroll {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 35px;
+    .nav {
+        position: relative;
+        z-index: 2;
+        float: left;
+    }
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 10px;
+    //     left: 15px;
+    //     width: 90%;
+    //     height: 10px;
+    //     @include border-radius(50%);
+    //     @include box-shadow(0 0 70px #000); 
+    // }
+}
+
+// scrollable base style
+.scroll {
+    position: relative;
+    overflow: hidden;
+}
+.scroll__wrap {
+    position: absolute;
+    width: 2000em;
+}
+.scroll__item {
+    float: left;
+}
+
+.scroll-nav {
+    text-align: center;
+    a {
+        display: inline-block;
+        margin-right: 5px;
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        @include border-radius(50%);
+        cursor: pointer;
+    }
+    .active {
+        background: #9ebf4e;
+        @include box-shadow(0 0 0 2px #fff); 
+    }
+}
+// image scrolable
+.scroll-img {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 675px; 
+    border: 5px solid #fff;
+    .scroll-nav {
+        position: absolute;
+        bottom: 19px;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+    }
+} 
+.scroll-main {
+    height: 298px;
+    overflow: hidden;
+    img {
+        float: left;
+    }
+}
+// scrollable logo partners
+.scrollable {
+    position: relative;
+    width: 990px;
+    margin: 0 auto;
+    height: 110px;
+    .icon_prev, 
+    .icon_next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -9px;
+        cursor: pointer;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+    .icon_prev {
+        left: 0;
+    }
+    .disabled {
+        display: none;
+    }
+}
+.scroll-partners {
+    margin-left: 23px;
+    padding-top: 15px;
+    width: 938px;
+    height: 95px;
+    background: #fff;
+    @include skew(-10deg);
+    .scroll__wrap {
+        @include skew(10deg);
+    }
+    .scroll__item {
+        margin-left: 18px;
+        width: 215px;
+        a{
+            float: right;
+            width: 170px;
+            line-height: 1;
+        }
+        strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+    img {
+        float: left;
+        margin-right: 9px;
+        border: 1px solid #c1c5c6;
+    }
+}
