@@ -38,6 +38,14 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Conv_MinionPro-Regular';
+    src: url('../fonts/MinionPro-Regular.eot');
+    src: local('☺'), url('../fonts/MinionPro-Regular.woff') format('woff'), url('../fonts/MinionPro-Regular.ttf') format('truetype'), url('../fonts/MinionPro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* ------------------------------------- Reset css -------------------------------------------- */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
 h6, p, blockquote, pre,a, abbr, acronym, address, big,
@@ -121,6 +129,12 @@ a{
     @extend %clr;
 }
 .title-l-1 {
+    @include pts_b;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.title-l-2 {
     @include pts_b;
     font-size: 20px;
     font-weight: normal;
@@ -324,6 +338,17 @@ a{
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
 
+// layouts
+.l-cols-wrap {
+    overflow: hidden;
+    margin-right: -50px;
+    padding-top: 43px;
+}
+.l-col-3 {
+    float: left;
+    margin-right: 48px;
+    width: 295px;
+}
 // icons
 .icon {
     display: inline-block;
@@ -340,6 +365,9 @@ a{
 .icon_nav4 {@include sized-sprite($icons, nav4);}
 .icon_prev {@include sized-sprite($icons, prev);}
 .icon_next {@include sized-sprite($icons, next);}
+.icon_rate {@include sized-sprite($icons, rate);}
+.icon_arr2 {@include sized-sprite($icons, arr2);}
+
 
 
 .soc {
@@ -356,7 +384,109 @@ a{
 .g {@include sized-sprite($icons, g);}
 .ln {@include sized-sprite($icons, ln);} 
 
+// Consultant
+.cons {
+    float: left;
+    margin-right: 18px;
+    position: relative;
+    font-size: 12px;
+    color: #666;
+    font-family: Arial, sans-serif;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        margin-left: -42%;
+        width: 84%;
+        height: 4px;
+        @include box-shadow(0 0 15px #000);
+    }
+    img {
+        float: left;
+        margin-right: 5px;
+    }
+    hr {
+        display: block;
+        margin: 10px 0;
+        border: none; 
+        color: #d3d3d3;
+        background: #d3d3d3; 
+        height: 1px;
+    }
+}
+.cons__wrap {
+    position: relative;
+    z-index: 2;
+    padding: 12px 29px 65px;
+    width: 156px;
+    background: #f9f9f9;
+    border: 1px solid #b7b6b6;
+    @include border-radius(10px);
+}
+.cons__name {
+    display: block;
+    color: #335e99;
+    font-size: 13px;
+}
+.cons__spec {
+    display: block;
+    margin: 11px 0 3px;
+    clear: both;
+}
+.cons__badge {
+    display: inline-block;
+    height: 13px;
+    line-height: 13px;
+    padding: 0 6px;
+    color: #fff;
+    font-size: 10px;
+    background: #f4a46e;
+    @include border-radius(2px);
+}
+.cons__badge_mod {
+    background: #f28159;
+}
+.cons__rate {
+    display: block;
+    margin-bottom: 1px;
+    strong {
+        color: #6ba601;
+    }
+    a {
+        color: #7a7a7a;
+    }
+}
+.cons__cont {
+    position: absolute;
+    bottom: 11px;
+    right: 24px;
+    a {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+.cons__phone {@include sized-sprite($icons, cons-phone);}
+.cons__email {@include sized-sprite($icons, cons-email);}
+.cons__message {
+    position: relative;
+    text-align: center;
+    @include sized-sprite($icons, cons-mess);
+    span {
+        position: absolute;
+        right: 0;
+        top: 6px;
+        width: 34px;
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+    }
+} 
 
+.lase {
+    height: 47px;
+    background: url(../img/lase.png) 0 0 no-repeat;
+}
 
 .nav {
     width: 295px;

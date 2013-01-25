@@ -17,10 +17,13 @@
 .scroll-main { height: 298px; overflow: hidden; }
 .scroll-main img { float: left; }
 
-.scrollable { position: relative; width: 990px; margin: 0 auto; height: 110px; }
+.scrollable { position: relative; width: 1000px; margin: 0 auto; }
 .scrollable .icon_prev, .scrollable .icon_next { position: absolute; right: 0; top: 50%; margin-top: -9px; cursor: pointer; user-select: none; -moz-user-select: none; -webkit-user-select: none; }
 .scrollable .icon_prev { left: 0; }
 .scrollable .disabled { display: none; }
+.scrollable .all-cons-link { margin-bottom: 45px; text-align: center; }
+
+.scrollable_partn { margin-bottom: 54px; }
 
 .scroll-partners { margin-left: 23px; padding-top: 15px; width: 938px; height: 95px; background: #fff; -moz-transform: skew(-10deg); -o-transform: skew(-10deg); -webkit-transform: skew(-10deg); -ms-transform: skew(-10deg); transform: skew(-10deg); }
 .scroll-partners .scroll__wrap { -moz-transform: skew(10deg); -o-transform: skew(10deg); -webkit-transform: skew(10deg); -ms-transform: skew(10deg); transform: skew(10deg); }
@@ -28,3 +31,24 @@
 .scroll-partners .scroll__item a { float: right; width: 170px; line-height: 1; }
 .scroll-partners .scroll__item strong { display: block; margin-bottom: 8px; }
 .scroll-partners img { float: left; margin-right: 9px; border: 1px solid #c1c5c6; }
+
+.scrollable-wrap { margin: 0 10px; border-bottom: 1px dashed #fff; }
+
+.scroll-cons { width: 920px; margin: 0 auto; height: 267px; }
+
+.all-cons-link { padding-top: 6px; }
+.all-cons-link a { font-size: 17px; text-decoration: none; border-bottom: 1px solid; }
+.all-cons-link a:hover { border-bottom: 0; }
+.all-cons-link i { margin-left: 6px; }
+
+.title-l-1_index { margin-bottom: 17px; color: #b1b7b8; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75); }
+
+.feed { color: #474747; }
+.feed li { margin-bottom: 26px; }
+
+.feed__date { display: block; margin-bottom: -8px; color: #99a0a1; font-size: 13px; }
+
+.feed__title a { font-size: 17px; color: #000; font-weight: normal; }
+
+.feed__descr { font-weight: normal; font-family: 'pt_sansitalic', sans-serif; font-style: normal; }
+.feed__descr:after { content: "→"; font-weight: normal; font-family: 'Conv_MinionPro-Regular'; color: #75922e; font-size: 17px; padding-left: 5px; }

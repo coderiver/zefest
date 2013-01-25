@@ -31,3 +31,7 @@ $logos: sprite-map("logos/*.png", $spacing: 10px);
     font-weight: bold;
     font-family: 'Myriad pro', sans-serif;
 }
+@mixin min_r {
+    font-weight: normal;
+    font-family: 'Conv_MinionPro-Regular';
+}

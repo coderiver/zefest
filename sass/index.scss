@@ -74,9 +74,8 @@
 // scrollable logo partners
 .scrollable {
     position: relative;
-    width: 990px;
+    width: 1000px;
     margin: 0 auto;
-    height: 110px;
     .icon_prev, 
     .icon_next {
         position: absolute;
@@ -94,6 +93,13 @@
     .disabled {
         display: none;
     }
+    .all-cons-link  {
+        margin-bottom: 45px;
+        text-align: center;
+    }
+}
+.scrollable_partn {
+    margin-bottom: 54px;
 }
 .scroll-partners {
     margin-left: 23px;
@@ -122,5 +128,69 @@
         float: left;
         margin-right: 9px;
         border: 1px solid #c1c5c6;
+    }
+}
+
+// scroll consultans
+.scrollable-wrap {
+    margin: 0 10px;
+    border-bottom: 1px dashed #fff;
+}
+.scroll-cons {
+    width: 920px;
+    margin: 0 auto;
+    height: 267px;
+}
+
+
+.all-cons-link {
+    padding-top: 6px;
+    a {
+        font-size: 17px;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        &:hover {
+            border-bottom: 0;
+        }
+    }
+    i {
+        margin-left: 6px;
+    }
+}
+
+.title-l-1_index {
+    margin-bottom: 17px;
+    color: #b1b7b8;
+    text-shadow: 0 1px 0 rgba(255,255,255,.75);
+}
+
+.feed {
+    color: #474747;
+    li {
+        margin-bottom: 26px;
+    }
+}
+.feed__date {
+    display: block;
+    margin-bottom: -8px;
+    color: #99a0a1;
+    font-size: 13px;
+}
+.feed__title {
+    a {
+        font-size: 17px;
+        color: #000;
+        font-weight: normal;
+    }
+}
+.feed__descr {
+    @include pts_i;
+    font-style: normal;
+    &:after {
+        content: "→";
+        @include min_r;
+        color: #75922e;
+        font-size: 17px;
+        padding-left: 5px;
     }
 }
