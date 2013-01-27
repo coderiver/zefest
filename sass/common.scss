@@ -100,7 +100,6 @@ body{
     
 a{
 	color: #75922e;
-    font-size: 13px;
 	&:hover{
 		text-decoration:none;
 	}
@@ -342,7 +341,6 @@ a{
 .l-cols-wrap {
     overflow: hidden;
     margin-right: -50px;
-    padding-top: 43px;
 }
 .l-col-3 {
     float: left;
@@ -367,6 +365,11 @@ a{
 .icon_next {@include sized-sprite($icons, next);}
 .icon_rate {@include sized-sprite($icons, rate);}
 .icon_arr2 {@include sized-sprite($icons, arr2);}
+.icon_dollar {@include sized-sprite($icons, dollar);}
+.icon_euro {@include sized-sprite($icons, euro);}
+.icon_vk {@include sized-sprite($icons, vk2);}
+.icon_fb {@include sized-sprite($icons, fb2);}
+.icon_tw {@include sized-sprite($icons, tw2);}
 
 
 
@@ -538,9 +541,139 @@ a{
     }
 }
 
+.require {
+    position: relative;
+    margin: 1px 0 30px;
+    width: 205px;
+    max-height: 132px;
+    padding: 20px 20px 15px;
+    color: #fff;
+    @include pts_i;
+    font-size: 15px;
+    line-height: 1;
+    background: #9ebf4e;
+    border-top: 1px solid #c5d995; 
+    border-bottom: 9px solid #829d42;
+    @include box-shadow(0 -1px 0 #9ebf4e);
+    &:after {
+        content: "";
+        position: absolute;
+        right: -49px;
+        top: -1px;
+        @include sized-sprite($icons, corner);
+    }
+}
+.require__title {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 18px;
+    @include pts_b;
+    text-transform: uppercase;
+}
+// ezchange rate
+.exchange {
+    margin: 30px 0;
+    overflow: hidden;
+    padding: 16px 36px;
+    border: 1px solid #fff;
+    .icon {
+        vertical-align: middle;
+    }
+}
+.exchange__dollar {
+    float: left;
+}
+.exchange__euro {
+    float: right;
+}
+.exchange__rate {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    padding-left: 17px;
+    @include pts_i;
+    background: url(../img/icons/top.png) 0 50% no-repeat;
+    strong {
+        display: block;
+        color: #829d42;
+        font-weight: normal;
+    }
+}
+.exchange__rate_fall {
+    background: url(../img/icons/bottom.png) 0 50% no-repeat;
+    strong {
+        color: #ec2d13;
+    }
+}
+
+// liga banner
+.liga {
+    display: block;
+    margin: 30px 0;
+    @include sized-sprite($logos, liga);
+}
+
+// social tabs
+.soc-tabs {
+    overflow: hidden;
+    margin-bottom: 1px;
+    li {
+        position: relative;
+        float: left;
+        margin-right: 7px;
+        padding: 4px 0 0 3px;
+        height: 28px;
+        width: 88px;
+        background: #fff;
+        cursor: pointer;
+        &:after {
+            content: "";
+            position: absolute;
+            right: -5px;
+            top: 0;
+            height: 0;
+            border-right: 6px solid transparent;
+            border-bottom: 32px solid #fff;
+        }
+    }
+    .icon {
+        opacity: .4;
+    }
+    .last {
+        width: 96px;
+        margin-right: 0;
+        &:after {
+            display: none;
+        }
+    }
+    .active {
+        .icon {
+            opacity: 1;
+        }
+    }
+}
+.soc-plugin {
+    position: relative;
+    margin-bottom: 8px;
+    display: none;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 21px;
+        bottom: 9px;
+        width: 85%;
+        height: 7px;
+        @include box-shadow(0 0 23px #000);      
+    }
+}
+.soc-plugin__wrap {
+    position: relative;
+    z-index: 2;
+}
+
 // form
 .input {
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
     label {
         display: block;
         margin-bottom: 6px;
@@ -664,6 +797,7 @@ a{
 /* ----------------------------------------- Footer ---------------------------------------------- */
 .footer {
     position: relative;
+    margin-top: 50px;
     height: 124px;
     font-size: 13px;
     background: #d6e2e5 url(../img/footer-bg.png) 0 0 repeat;

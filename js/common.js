@@ -65,4 +65,16 @@ $(document).ready(function() {
        }
      });
    }
+
+   // soc tabs
+   $(".soc-tabs li:first").addClass("active");
+   $(".tab-soc-1").show();
+   $(".soc-tabs li").click(function(){
+      $(".soc-tabs li").removeClass("active");
+      $(this).addClass("active");
+      var tab_act = $(this).attr("data-tab");
+      $(".soc-plugin").hide();
+      $(tab_act).show();
+   });
+
 });

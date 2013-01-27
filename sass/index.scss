@@ -97,6 +97,14 @@
         margin-bottom: 45px;
         text-align: center;
     }
+    .all-link {
+        margin: 0 auto;
+        width: 990px;
+        text-align: center;
+    }
+    .lase  {
+        margin: 37px 0;
+    }
 }
 .scrollable_partn {
     margin-bottom: 54px;
@@ -118,10 +126,14 @@
             float: right;
             width: 170px;
             line-height: 1;
+            font-size: 13px;
         }
         strong {
             display: block;
             margin-bottom: 8px;
+            font-size: 15px;
+            font-weight: normal;
+            @include pts_b;
         }
     }
     img {
@@ -133,8 +145,8 @@
 
 // scroll consultans
 .scrollable-wrap {
+    position: relative;
     margin: 0 10px;
-    border-bottom: 1px dashed #fff;
 }
 .scroll-cons {
     width: 920px;
@@ -143,7 +155,8 @@
 }
 
 
-.all-cons-link {
+.all-link {
+    border-top: 1px dashed #fff;
     padding-top: 6px;
     a {
         font-size: 17px;
@@ -152,12 +165,15 @@
         &:hover {
             border-bottom: 0;
         }
-    }
-    i {
-        margin-left: 6px;
+        @extend %arrow;
     }
 }
-
+.all-link_red {
+    a {
+        color: #ec2d13;
+        @extend %arrow_red;
+    }
+}
 .title-l-1_index {
     margin-bottom: 17px;
     color: #b1b7b8;
@@ -165,6 +181,7 @@
 }
 
 .feed {
+    padding-right: 5px;
     color: #474747;
     li {
         margin-bottom: 26px;
@@ -185,12 +202,25 @@
 }
 .feed__descr {
     @include pts_i;
-    font-style: normal;
-    &:after {
-        content: "→";
-        @include min_r;
-        color: #75922e;
-        font-size: 17px;
-        padding-left: 5px;
+    @extend %arrow;
+}
+.spec-propose {
+    padding-right: 5px;
+    li {
+        margin-bottom: 24px;
     }
+}
+.spec-propose__title {
+    margin-bottom: 3px;
+    color: #ec2d13;
+    font-size: 17px;
+    text-transform: uppercase;
+    a {
+        color: #ec2d13;
+    }
+}
+.spec-propose__descr {
+    @include pts_i;
+    font-size: 15px;
+    @extend %arrow_red;
 }

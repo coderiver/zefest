@@ -1,3 +1,8 @@
+@charset "IBM866";
+.all-link a:after, .feed__descr:after { content: "→"; font-family: 'Conv_MinionPro-Regular'; color: #75922e; font-size: 17px; padding-left: 5px; }
+
+.all-link_red a:after, .spec-propose__descr:after { content: "→"; font-family: 'Conv_MinionPro-Regular'; color: #ec2d13; font-size: 17px; padding-left: 5px; }
+
 .wrap-scroll { position: relative; overflow: hidden; padding-bottom: 35px; }
 .wrap-scroll .nav { position: relative; z-index: 2; float: left; }
 
@@ -11,7 +16,7 @@
 .scroll-nav a { display: inline-block; margin-right: 5px; width: 14px; height: 14px; background: #fff; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; cursor: pointer; }
 .scroll-nav .active { background: #9ebf4e; -webkit-box-shadow: 0 0 0 2px white; -moz-box-shadow: 0 0 0 2px white; box-shadow: 0 0 0 2px white; }
 
-.scroll-img { position: relative; z-index: 2; float: left; width: 675px; border: 5px solid #fff; }
+.scroll-img { position: relative; z-index: 2; float: left; width: 675px; border: 5px solid white; }
 .scroll-img .scroll-nav { position: absolute; bottom: 19px; left: 0; z-index: 2; width: 100%; }
 
 .scroll-main { height: 298px; overflow: hidden; }
@@ -22,33 +27,43 @@
 .scrollable .icon_prev { left: 0; }
 .scrollable .disabled { display: none; }
 .scrollable .all-cons-link { margin-bottom: 45px; text-align: center; }
+.scrollable .all-link { margin: 0 auto; width: 990px; text-align: center; }
+.scrollable .lase { margin: 37px 0; }
 
 .scrollable_partn { margin-bottom: 54px; }
 
 .scroll-partners { margin-left: 23px; padding-top: 15px; width: 938px; height: 95px; background: #fff; -moz-transform: skew(-10deg); -o-transform: skew(-10deg); -webkit-transform: skew(-10deg); -ms-transform: skew(-10deg); transform: skew(-10deg); }
 .scroll-partners .scroll__wrap { -moz-transform: skew(10deg); -o-transform: skew(10deg); -webkit-transform: skew(10deg); -ms-transform: skew(10deg); transform: skew(10deg); }
 .scroll-partners .scroll__item { margin-left: 18px; width: 215px; }
-.scroll-partners .scroll__item a { float: right; width: 170px; line-height: 1; }
-.scroll-partners .scroll__item strong { display: block; margin-bottom: 8px; }
+.scroll-partners .scroll__item a { float: right; width: 170px; line-height: 1; font-size: 13px; }
+.scroll-partners .scroll__item strong { display: block; margin-bottom: 8px; font-size: 15px; font-weight: normal; font-weight: normal; font-family: "pt_sansbold", sans-serif; }
 .scroll-partners img { float: left; margin-right: 9px; border: 1px solid #c1c5c6; }
 
-.scrollable-wrap { margin: 0 10px; border-bottom: 1px dashed #fff; }
+.scrollable-wrap { position: relative; margin: 0 10px; }
 
 .scroll-cons { width: 920px; margin: 0 auto; height: 267px; }
 
-.all-cons-link { padding-top: 6px; }
-.all-cons-link a { font-size: 17px; text-decoration: none; border-bottom: 1px solid; }
-.all-cons-link a:hover { border-bottom: 0; }
-.all-cons-link i { margin-left: 6px; }
+.all-link { border-top: 1px dashed white; padding-top: 6px; }
+.all-link a { font-size: 17px; text-decoration: none; border-bottom: 1px solid; }
+.all-link a:hover { border-bottom: 0; }
+
+.all-link_red a { color: #ec2d13; }
 
 .title-l-1_index { margin-bottom: 17px; color: #b1b7b8; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75); }
 
-.feed { color: #474747; }
+.feed { padding-right: 5px; color: #474747; }
 .feed li { margin-bottom: 26px; }
 
 .feed__date { display: block; margin-bottom: -8px; color: #99a0a1; font-size: 13px; }
 
 .feed__title a { font-size: 17px; color: #000; font-weight: normal; }
 
-.feed__descr { font-weight: normal; font-family: 'pt_sansitalic', sans-serif; font-style: normal; }
-.feed__descr:after { content: "→"; font-weight: normal; font-family: 'Conv_MinionPro-Regular'; color: #75922e; font-size: 17px; padding-left: 5px; }
+.feed__descr { font-weight: normal; font-family: "pt_sansitalic", sans-serif; }
+
+.spec-propose { padding-right: 5px; }
+.spec-propose li { margin-bottom: 24px; }
+
+.spec-propose__title { margin-bottom: 3px; color: #ec2d13; font-size: 17px; text-transform: uppercase; }
+.spec-propose__title a { color: #ec2d13; }
+
+.spec-propose__descr { font-weight: normal; font-family: "pt_sansitalic", sans-serif; font-size: 15px; }

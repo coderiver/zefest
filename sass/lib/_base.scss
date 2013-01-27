@@ -68,6 +68,24 @@ $break-large: 1180px;
     visibility: hidden;
     }
 }
+%arrow {
+  &:after {
+      content: "→";
+      font-family: 'Conv_MinionPro-Regular';
+      color: #75922e;
+      font-size: 17px;
+      padding-left: 5px;
+  }
+}
+%arrow_red {
+  &:after {
+      content: "→";
+      font-family: 'Conv_MinionPro-Regular';
+      color: #ec2d13;
+      font-size: 17px;
+      padding-left: 5px;
+  }
+}
 // %clr{
 //   &:before,
 //   &:after {
