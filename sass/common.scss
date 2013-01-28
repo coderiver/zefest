@@ -383,12 +383,15 @@ a{
 .icon_prev {@include sized-sprite($icons, prev);}
 .icon_next {@include sized-sprite($icons, next);}
 .icon_rate {@include sized-sprite($icons, rate);}
+.icon_rate2 {@include sized-sprite($icons, rate2);}
 .icon_arr2 {@include sized-sprite($icons, arr2);}
 .icon_dollar {@include sized-sprite($icons, dollar);}
 .icon_euro {@include sized-sprite($icons, euro);}
 .icon_vk {@include sized-sprite($icons, vk2);}
 .icon_fb {@include sized-sprite($icons, fb2);}
 .icon_tw {@include sized-sprite($icons, tw2);}
+.icon_eye {@include sized-sprite($icons, eye);}
+.icon_com {@include sized-sprite($icons, com);}
 
 
 
@@ -745,6 +748,35 @@ a{
         vertical-align: middle;
     }
 }
+
+.select {
+    position: relative;
+    width: 147px;
+    height: 24px;
+    span, select {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 24px;
+        cursor: pointer; 
+        @include box-sizing(border-box);
+    }
+    span {
+        padding-left: 6px;
+        font-size: 13px;
+        line-height: 22px;
+        @include border-radius(2px);
+        border: 1px solid #c1c5c6;
+        border-top: 1px solid #838a8e;
+        background: #fff url(../img/icons/select.png) 96% 50% no-repeat;
+    }
+    select {
+        z-index: 2;
+        opacity: 0;
+    }
+}
+
 // buttons
 .btn-simple {
     display: inline-block;

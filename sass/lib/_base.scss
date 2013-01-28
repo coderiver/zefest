@@ -49,6 +49,11 @@ $break-large: 1180px;
   -webkit-user-select: $var;
           user-select: $var;
 }
+@mixin box-sizing($var) {
+     -moz-box-sizing: $var;
+  -webkit-box-sizing: $var;
+          box-sizing: $var;
+}
 // TRANSITION
 @mixin transition($what: all, $length: 1s, $easing: ease-in-out) {
     -moz-transition:    $what $length $easing;

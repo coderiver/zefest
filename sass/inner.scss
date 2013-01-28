@@ -5,7 +5,7 @@
     .title-l-1 {
         float: left;
     }
-    .btn {
+    .btn, .select {
         float: right;
     }
 }
@@ -27,7 +27,26 @@
     color: #99a0a1;
     font-size: 13px;
 }
+.article__preview {
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #c9d0d1;
+    img {
+        display: block;
+        border: 3px solid #fff;
+    }
+}
+.article__meta {
+    padding-left: 8px;
+    color: #99a0a1;
+    font-size: 13px;
+    .icon {
+        vertical-align: middle;
+        margin:0 3px 0 5px;
+    }
+}
 .article__descr {
+    overflow: hidden;
     p {
         margin-bottom: 10px;
     }
