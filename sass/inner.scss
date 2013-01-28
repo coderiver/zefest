@@ -1,1 +1,172 @@
 @import "base";
+.page-title {
+    overflow: hidden;
+    padding-bottom: 28px;
+    .title-l-1 {
+        float: left;
+    }
+    .btn {
+        float: right;
+    }
+}
+.article {
+    margin-bottom: 28px;
+    padding-bottom: 30px;
+    color: #474747;
+    @include box-shadow(inset 0 -20px 32px -15px rgba(255,255,255,0.8));
+    .title-l-2 {
+        padding-bottom: 3px;
+        color: #3375b1;
+        a {
+            color: #3375b1;
+        }
+    }
+}
+.article__date {
+    padding-bottom: 14px;
+    color: #99a0a1;
+    font-size: 13px;
+}
+.article__descr {
+    p {
+        margin-bottom: 10px;
+    }
+}
+.question {
+    overflow: hidden;
+}
+.question__body {
+    display: none;
+    padding: 0 0 10px 48px;
+    @include pts_i;
+    p {
+        margin-bottom: 10px;
+    }
+}
+.question__date {
+    margin-bottom: 2px;
+    font-size: 13px;
+    @include pts_r;
+}
+.question__read {
+    color: #75922e;
+    border-bottom: 1px dashed;
+    @extend %arrow;
+    cursor: pointer;
+    @include user-select(none);
+}
+
+.pagin {
+    a {
+        display: inline-block;
+        margin-right: 12px;
+        &:first-child, 
+        &:last-child {
+            @include min_r;
+        }
+    }
+}
+.pagin__active {
+    @include pts_b;
+    color: #3375b1;
+    text-decoration: none;
+}
+
+.popup_question {
+    width: 523px;
+    margin-left: -261px;
+    textarea {
+        height: 183px;
+    }
+    .btn_big {
+        margin: 0 auto;
+        width: 128px; 
+        width: 128px;
+        display: block;
+    }
+}
+
+.tab {
+    margin-top: 50px;
+    margin-bottom: -23px;
+    li {
+    }
+    span {
+        display: block;
+        position: relative;
+        margin: -22px auto -1px;
+        padding-left: 6px;
+        width: 138px;
+        height: 21px;
+        line-height: 21px;
+        background: #f8f7f7;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #d8d6d6;
+        cursor: pointer;
+        @include user-select(none);
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: -1px;
+            right: -12px;
+            @include sized-sprite($icons, corn-r);
+        }
+        &:before {
+            left: -12px;
+            @include sized-sprite($icons, corn-l);
+        }
+    }
+    .active {
+        background: #fff;
+        &:after {
+            @include sized-sprite($icons, corn-r-active);
+        }
+        &:before {
+            @include sized-sprite($icons, corn-l-active);
+        }
+    } 
+    div {
+        height: 21px;
+        background: #f8f7f7;
+        border: 1px solid #d8d6d6;
+    }
+}
+.tab-cont {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #d8d6d6;
+    border-top: 0;
+    .icon_prev,
+    .icon_next { 
+        position: absolute;
+        top: 50%;
+        right: 13px;
+        margin-top: -9px;
+        cursor: pointer;
+        @include user-select(none);
+    }
+    .icon_prev {
+        left: 13px;
+    }
+    .disabled {
+        display: none;
+    }
+}
+
+.scroll-tab {
+    padding-top: 12px;
+    margin: 0 auto;
+    height: 260px; 
+    width: 226px;
+    .scroll__item {
+        padding: 5px;
+        margin-right: 15px;
+    }
+    .cons {
+        margin: 0;
+    }
+}

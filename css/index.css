@@ -4,6 +4,7 @@
 
 .wrap-scroll { position: relative; overflow: hidden; padding-bottom: 52px; }
 .wrap-scroll .nav { position: relative; z-index: 2; float: left; }
+.wrap-scroll:after { content: ""; position: absolute; bottom: 60px; left: 20px; width: 90%; height: 10px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 45px black; -moz-box-shadow: 0 0 45px black; box-shadow: 0 0 45px black; }
 
 .scroll { position: relative; overflow: hidden; }
 
@@ -29,9 +30,10 @@
 .scrollable .all-link { margin: 0 auto; width: 990px; text-align: center; }
 .scrollable .lase { margin: 37px 0; }
 
-.scrollable_partn { margin-bottom: 54px; }
+.scrollable_partn { position: relative; margin-bottom: 54px; }
+.scrollable_partn:after { content: ""; position: absolute; bottom: 15px; left: 20px; width: 90%; height: 10px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 45px black; -moz-box-shadow: 0 0 45px black; box-shadow: 0 0 45px black; }
 
-.scroll-partners { margin-left: 30px; padding-top: 15px; width: 942px; height: 95px; background: #fff; -moz-transform: skew(-7deg); -o-transform: skew(-7deg); -webkit-transform: skew(-7deg); -ms-transform: skew(-7deg); transform: skew(-7deg); }
+.scroll-partners { position: relative; z-index: 2; margin-left: 30px; padding-top: 15px; width: 942px; height: 95px; background: #fff; -moz-transform: skew(-7deg); -o-transform: skew(-7deg); -webkit-transform: skew(-7deg); -ms-transform: skew(-7deg); transform: skew(-7deg); }
 .scroll-partners .scroll__wrap { -moz-transform: skew(7deg); -o-transform: skew(7deg); -webkit-transform: skew(7deg); -ms-transform: skew(7deg); transform: skew(7deg); }
 .scroll-partners .scroll__item { margin-left: 18px; width: 215px; }
 .scroll-partners .scroll__item a { float: right; width: 170px; line-height: 1; font-size: 13px; }

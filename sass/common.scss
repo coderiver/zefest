@@ -135,9 +135,8 @@ a{
 }
 .title-l-2 {
     @include pts_b; 
-    font-size: 20px;
+    font-size: 17px;
     font-weight: normal;
-    text-transform: uppercase;
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
@@ -146,6 +145,7 @@ a{
     position: relative;
     margin-bottom: 37px;
     padding: 35px 0 33px;
+    height: 66px;
     background: #fff;
     &:after {
        content: "";
@@ -292,6 +292,9 @@ a{
             margin-left: 9px;
         }
     }
+    .active {
+        background: #92b244;
+    }
     a {
         display: block;
         padding: 0 23px 0 20px;
@@ -351,6 +354,18 @@ a{
     margin-right: 48px;
     width: 295px;
 }
+.l-cols {
+    overflow: hidden;
+    padding: 30px 0 50px;
+}
+.main-col{
+    float: left;
+    width: 640px;
+}
+.sidebar {
+    width: 295px;
+    float: right;
+}
 // icons
 .icon {
     display: inline-block;
@@ -399,16 +414,6 @@ a{
     font-size: 12px;
     color: #666;
     font-family: Arial, sans-serif;
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 2px;
-        left: 50%;
-        margin-left: -42%;
-        width: 84%;
-        height: 4px;
-        @include box-shadow(0 0 15px #000);
-    }
     img {
         float: left;
         margin-right: 5px;
@@ -429,8 +434,9 @@ a{
     height: 192px;
     width: 156px;
     background: #f9f9f9;
-    border: 1px solid #b7b6b6;
+    border: 1px solid #ededed;
     @include border-radius(10px);
+    @include box-shadow(0 0 5px rgba(0,0,0,.1));
 }
 .cons__name {
     display: block;
@@ -490,6 +496,24 @@ a{
         color: #666;
     }
 } 
+
+.cons_index {
+    
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 50%;
+        margin-left: -42%;
+        width: 84%;
+        height: 4px;
+        @include box-shadow(0 0 15px #000);
+    }
+    .cons__wrap {
+        border: 1px solid #b7b6b6;
+        @include box-shadow(none);
+    }
+}
 
 .lase {
     height: 47px;
@@ -634,7 +658,7 @@ a{
         &:after {
             content: "";
             position: absolute;
-            right: -5px;
+            right: -6px;
             top: 0;
             height: 0;
             border-right: 6px solid transparent;
@@ -685,7 +709,7 @@ a{
         color: #666565;
         font-size: 13px;
     }
-    input {
+    input, textarea {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -700,6 +724,10 @@ a{
         &:focus {
            border-top: 1px solid #c1c5c6; 
         }
+    }
+    textarea {
+        resize: vertical;
+        padding: 6px;
     }
 }
 .input_s {
@@ -743,6 +771,7 @@ a{
     color: #fff;
     @include pts_b;
     text-align: center;
+    border: 0;
     border-top: 1px solid #b4dbf3;
     border-bottom: 2px solid #3375b1;
     @include border-radius(2px);
@@ -755,6 +784,11 @@ a{
         border-bottom: 2px solid #73bce9;
         @include background-image(linear-gradient(#5fa5e5, #73bce9));
     }
+}
+.btn_big {
+    height: 32px;
+    font-size: 16px;
+    margin-top: 4px;
 }
 
 // popup
@@ -769,6 +803,8 @@ a{
     border: 20px solid rgba(0,0,0,0.3);
     @include border-radius(7px)
 }
+
+
 .popup__wrap {
     position: relative;
     padding: 30px 60px;

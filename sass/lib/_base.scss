@@ -44,6 +44,11 @@ $break-large: 1180px;
           transform: skew($deg);
 }
 
+@mixin user-select($var) {
+     -moz-user-select: $var;
+  -webkit-user-select: $var;
+          user-select: $var;
+}
 // TRANSITION
 @mixin transition($what: all, $length: 1s, $easing: ease-in-out) {
     -moz-transition:    $what $length $easing;

@@ -7,6 +7,14 @@ $(document).ready(function() {
         $(".js-popup-enter").fadeOut();
     });
 
+    // ask question popup
+    $(".js-ask").click(function(){
+        $(".js-question").fadeIn();
+    });
+    $(".js-close-popup").click(function(){
+        $(".js-question").fadeOut();
+    });
+
     // scrollable main
     $(".js-scroll-main").scrollable().navigator(".js-scroll-nav");
     $(".js-scroll-partn").scrollable({
@@ -16,6 +24,10 @@ $(document).ready(function() {
     $(".js-scroll-cons").scrollable({
       next:'.js-next-cons',
       prev:'.js-prev-cons'
+    });
+    $(".js-scroll-item").scrollable({
+      next:'.js-next-item',
+      prev:'.js-prev-item'
     });
     if ($(".js-scroll-partn").length>0) {
      // Get the Scrollable control
@@ -77,4 +89,31 @@ $(document).ready(function() {
       $(tab_act).show();
    });
 
+   // tabs
+   $(".tab li:first span").addClass("active");
+   $(".tab li:first div").addClass("active");
+   $(".tab-cont1").show();
+   $(".tab span").click(function(){
+      $(".tab span").removeClass("active");
+      $(".tab div").removeClass("active");
+      $(this).addClass("active");
+      $(this).next().addClass("active");
+      var tab_act = $(this).parent().attr("data-tab");
+      $(".tab-cont").hide();
+      $(tab_act).show();
+   });
+
+   // show/hide answer
+   $(".js-answer-key").click(function(){
+    if($(this).hasClass("js-active-key")) {
+      $(this).text("Читать ответ");
+      $(this).removeClass("js-active-key");
+      $(this).prev().slideUp("fast");
+    }
+    else {
+      $(this).text("Скрыть ответ");
+      $(this).addClass("js-active-key");
+      $(this).prev().slideDown("fast");
+    }
+   });
 });
