@@ -2,7 +2,7 @@
 .wrap-scroll {
     position: relative;
     overflow: hidden;
-    padding-bottom: 35px;
+    padding-bottom: 52px;
     .nav {
         position: relative;
         z-index: 2;
@@ -110,14 +110,14 @@
     margin-bottom: 54px;
 }
 .scroll-partners {
-    margin-left: 23px;
+    margin-left: 30px;
     padding-top: 15px;
-    width: 938px;
+    width: 942px;
     height: 95px;
     background: #fff;
-    @include skew(-10deg);
+    @include skew(-7deg);
     .scroll__wrap {
-        @include skew(10deg);
+        @include skew(7deg);
     }
     .scroll__item {
         margin-left: 18px;
@@ -147,6 +147,14 @@
 .scrollable-wrap {
     position: relative;
     margin: 0 10px;
+    .icon_next, 
+    .icon_prev {
+        right: -8px;
+        margin-top: -30px;
+    }
+    .icon_prev {
+        left: -8px;
+    }
 }
 .scroll-cons {
     width: 920px;
@@ -157,7 +165,7 @@
 
 .all-link {
     border-top: 1px dashed #fff;
-    padding-top: 6px;
+    padding-top: 2px;
     a {
         font-size: 17px;
         text-decoration: none;
@@ -175,7 +183,7 @@
     }
 }
 .title-l-1_index {
-    margin-bottom: 17px;
+    margin-bottom: 18px;
     color: #b1b7b8;
     text-shadow: 0 1px 0 rgba(255,255,255,.75);
 }
@@ -184,7 +192,7 @@
     padding-right: 5px;
     color: #474747;
     li {
-        margin-bottom: 26px;
+        margin-bottom: 22px;
     }
 }
 .feed__date {
