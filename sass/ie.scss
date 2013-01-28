@@ -1,5 +1,37 @@
 .lteie8{
-	body{
-		background:red;
-	}
+	.soc-tabs {
+        .icon {
+            filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);   
+        }
+        .active {
+            .icon {
+                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);   
+            }
+        }
+    }
+}
+*+ html {
+    .icon,
+    .soc a,
+    .cons__badge,
+    .cons__cont a, 
+    .nav a span, 
+    .exchange__rate, 
+    .btn-simple,
+    .scroll-nav a  {
+        display: inline;
+    }
+}
+* html {
+    .l-col-3 {
+        margin-right: 35px;
+        overflow: hidden;
+    }
+    .exchange {
+        height: 100%;
+    }
+    .exchange__euro,
+    .exchange__dollar {
+        width: 105px;
+    }
 }
