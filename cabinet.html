@@ -1,0 +1,173 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Cabinet</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+<div class="l-wrapper">
+    <header class="header">
+        <div class="l-container">
+            <a class="logo" href="#"></a>
+            <div class="lang">
+                <a href="#" class="lang__active lang__rus"></a>
+                <a href="#" class="lang__eng"></a>
+            </div>
+            <div class="header__cont">
+                <div class="header__tel">
+                    <i class="icon icon_phone"></i>
+                    <span>
+                        <strong>+7 (495) 971-81-51</strong>
+                        9:00 — 20:00 (Московское время)
+                    </span>
+                </div>
+                <div class="header__skype">
+                    <i class="icon icon_skype"></i>
+                    zelfinans
+                </div>
+            </div>
+            <div class="enter-cab">
+                <div class="enter-cab__inf">
+                    <strong class="enter-cab__name">Вениамин Адабашьянченко</strong>
+                    <div>
+                        <a href="#">
+                            <i class="icon icon_cab"></i>Личный кабинет
+                        </a>
+                    </div>
+                    <a class="enter-cab__message" href="#">
+                        <i class="icon icon_message"></i>
+                        <span>5</span>
+                        Новых сообщений
+                    </a>
+                </div>
+                <button class="btn-simple">Выйти</button>
+                <!-- <button class="btn-simple js-enter">Войти/Регистрация</button> -->
+            </div>
+        </div>
+    </header>
+    <div class="l-container">
+        <nav class="menu">
+            <ul>
+                <li class="menu__home"><a href="#"></a></li>
+                <li>
+                    <a href="#">Каталог страховых продуктов<i class="icon icon_arr1"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">Страхование жизни</a></li>
+                        <li><a href="#">Медицинское страхование</a></li>
+                        <li><a href="#">Автострахование</a></li>
+                        <li><a href="#">Страхование имущества</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Купить онлайн</a></li>
+                <li><a href="#">Задать вопрос</a></li>
+                <li><a href="#">Услуги</a></li>                          
+            </ul>
+        </nav>
+        <div class="l-cols">
+            <div class="page-title">
+                <h1 class="title-l-1">Личный кабинет</h1>
+            </div>
+            <ul class="nav-cabinet">
+                <li><a class="active" href="#">Профиль</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Счета</a></li>
+                <li><a href="#">Страховые анкеты</a></li>
+            </ul>
+            <div class="form-wrap form-wrap_cabinet">
+                <h2 class="title-l-2">Профиль</h2>
+                <form>
+                    <fieldset class="fieldset">
+                        <span class="fieldset__label">Фамилия</span>
+                        <div class="input input_width">
+                            <input type="text">
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <span class="fieldset__label">Имя</span>
+                        <div class="input input_width">
+                            <input type="text">
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <span class="fieldset__label">Отчество</span>
+                        <div class="input input_width">
+                            <input type="text">
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <span class="fieldset__label">Фотография</span>
+                        <div class="change-photo">
+                            <img src="http://placehold.it/117x117">
+                            <a href="#">Изменить фотографию</a>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <span class="fieldset__label">Дата рождения</span>
+                        <div class="input input_width">
+                            <div class="select select_number">
+                                <span></span>
+                                <select>
+                                    <option>1</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <span></span>
+                                <select>
+                                    <option>Январь</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <span></span>
+                                <select>
+                                    <option>1994</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <span class="fieldset__label">Телефон</span>
+                        <div class="input input_width">
+                            <input type="text">
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <span class="fieldset__label">Пароль</span>
+                        <div class="change-pass">
+                            <input class="btn btn_gray" type="submit" value="Сменить пароль">
+                        </div>
+                    </fieldset>
+                    <input class="btn btn_big" type="submit" value="Сохранить">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer class="footer">
+    <div class="l-container wrap">
+        <nav class="footer__nav">
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Партнеры</a></li>
+                <li><a href="#">Программы сотрудничества</a></li>
+                <li><a href="#">Деловое сотрудничество</a></li>
+                <li><a href="#">Правовая помощь</a></li>
+                <li><a href="#">Контактная информация</a></li>           
+            </ul>
+        </nav>
+        <div class="copyright">© 2005—2012 <strong>Зелфинанс</strong></div>
+    </div>
+</footer>
+</body>
+</html>

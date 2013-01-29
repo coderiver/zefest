@@ -9,9 +9,15 @@
             }
         }
     }
-    .l-cols {
-        overflow: hidden;
+    .btn {
+        background: #5fa5e5;
     }
+    .btn_gray {
+        background: #9ba1a4;
+    }
+    // .l-cols {
+    //     overflow: hidden;
+    // }
 }
 *+ html {
     .icon,
@@ -21,8 +27,16 @@
     .nav a span, 
     .exchange__rate, 
     .btn-simple,
-    .scroll-nav a  {
+    .scroll-nav a, 
+    .select,
+    .partner__logo,
+    .partner__descr,
+    .partner__rate,
+    .program  {
         display: inline;
+    }
+    .select span {
+        display: none;
     }
 }
 * html {

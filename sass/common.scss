@@ -92,6 +92,7 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
+    min-width: 1000px;
     color: #474747;
 	@include pts_r;
     font-size: 15px;
@@ -129,12 +130,14 @@ a{
     @extend %clr;
 }
 .title-l-1 {
+    color: #303030;
     @include pts_b;
     font-size: 20px;
     font-weight: normal;
     text-transform: uppercase;
 }
 .title-l-2 {
+    color: #303030;
     @include pts_b; 
     font-size: 17px;
     font-weight: normal;
@@ -709,6 +712,24 @@ a{
 }
 
 // form
+.fieldset {
+    @extend %clr;
+    .input {
+        float: right;
+    }
+}
+.fieldset__label {
+    float: left;
+    padding-top: 3px;
+    color: #666565;
+    font-size: 13px;
+    b {
+        padding-left: 3px;
+        color: #de1111;
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
 .input {
     margin-bottom: 15px; 
     label {
@@ -742,6 +763,13 @@ a{
 .input_s {
     width: 233px;
 }
+.input_width {
+    width: 400px;
+    margin-bottom: 10px;
+    textarea {
+        min-height: 83px;
+    }
+}
 .ckeckbox {
     display: block;
     margin: -3px 0 15px;
@@ -770,6 +798,7 @@ a{
     position: relative;
     width: 147px;
     height: 24px;
+    display: inline-block;
     span, select {
         position: absolute;
         left: 0;
@@ -783,7 +812,7 @@ a{
         padding-left: 6px;
         font-size: 13px;
         line-height: 22px;
-        @include border-radius(2px);
+        @include border-radius(3px);
         border: 1px solid #c1c5c6;
         border-top: 1px solid #838a8e;
         background: #fff url(../img/icons/select.png) 96% 50% no-repeat;
@@ -792,6 +821,13 @@ a{
         z-index: 2;
         opacity: 0;
     }
+}
+.select_width {
+    width: 100%;
+    span {
+        background-position: 98% 50%;
+    }
+    
 }
 
 // buttons

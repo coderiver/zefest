@@ -1,13 +1,16 @@
 $(document).ready(function() {
 
     // select
-    var select_val = $(".select option:selected").html();
-    $(".select span").text(select_val);
-    $(".select select").change(function(){
-      select_val = $(".select option:selected").html();
-      $(this).prev().text(select_val);
+    $(".select span").each(function(){
+      var val = $(this).next().val();
+      $(this).text(val);
     });
-
+    // var select_val = $(".select option:selected").html();
+    // $(".select span").text(select_val);
+    $(".select select").change(function(){
+        var val = $(this).val();
+        $(this).prev().text(val);
+    });
     // popup enter
     $(".js-enter").click(function(){
         $(".js-popup-enter").fadeIn();
