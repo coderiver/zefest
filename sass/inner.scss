@@ -438,3 +438,57 @@
         @include sized-sprite($icons, corner-small);
     }
 } 
+
+// contacts
+.map {
+    float: left;
+    margin-right: 50px;
+    width: 586px;
+    height: 387px;
+    border: 1px solid #959898;
+} 
+.contacts {
+    overflow: hidden;
+    span, a, .icon {
+        vertical-align: middle;
+    }
+    div{
+        margin-top: 18px;
+    }
+}
+.contacts__call {
+    overflow: hidden;
+    div {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+    }
+    span {
+        display: block;
+        color: #666565;
+        font-size: 13px;
+    }
+    .icon {
+        margin-right: 4px;
+    } 
+}
+.contacts__phone {
+    .icon {
+        margin: 0 7px 0 3px;
+    }
+}
+.contacts__email {
+    .icon {
+        margin-right: 5px;
+    }
+}
+.contacts__skype {
+    .icon {
+        margin-right: 2px;
+    }
+}
+
+.scrollable_inner {
+    clear: both;
+    padding-top: 1px;
+}

@@ -372,7 +372,11 @@ a{
     display: inline-block;
 }
 .icon_phone {@include sized-sprite($icons, phone);}
+.icon_phone2 {@include sized-sprite($icons, phone2);}
+.icon_phone3 {@include sized-sprite($icons, phone3);}
 .icon_skype {@include sized-sprite($icons, skype);} 
+.icon_skype2 {@include sized-sprite($icons, skype2);} 
+.icon_email {@include sized-sprite($icons, email);} 
 .icon_cab {@include sized-sprite($icons, cab);}
 .icon_message {@include sized-sprite($icons, message);}
 .icon_close {@include sized-sprite($icons, close);}
