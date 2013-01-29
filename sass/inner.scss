@@ -5,7 +5,7 @@
     .title-l-1 {
         float: left;
     }
-    .btn, .select {
+    .btn, .select-wrap {
         float: right;
     }
 }
@@ -197,8 +197,7 @@
     @include box-shadow(inset 0 -20px 32px -15px rgba(255,255,255,0.8));
 }
 .content {
-    padding-top: 42px;
-    
+    padding-top: 14px;
     h1 {
         padding-bottom: 24px;
         color: #3375b1;
@@ -328,4 +327,67 @@
 .comment-l-5,
 .comment-l-6 {
     padding-left: 0;
+} 
+
+// partners
+.partner {
+    margin-bottom: 20px;
+    padding: 21px 0;
+    background: #fff;
+    @include border-radius(10px);
+    @include box-shadow(0 0 10px rgba(0,0,0,.1));
+}
+.partner__logo,
+.partner__descr,
+.partner__rate {
+    display: inline-block;
+    vertical-align: middle;
+} 
+.partner__logo {
+    margin-right: -4px;
+    text-align: center;
+    width: 121px;
+    img {
+        margin-bottom: -4px;
+    }
+}
+.partner__descr {
+    padding-left: 20px;
+    width: 375px;
+    font-size: 14px;
+    line-height: 1.1;
+    @include pts_i;
+    border-left: 1px solid #c1c5c6;
+}
+.partner__title {
+    margin-bottom: 14px;
+    @include pts_b;
+    font-size: 22px;
+    line-height: 20px;
+}
+.partner__rate {
+    width: 95px;
+    text-align: right;
+    @include pts_i;
+    font-size: 35px;
+    color: #75922e;
+}
+
+//consultants block
+.consultants{
+    
+}
+.consultants__wrap {
+    @extend %clr;
+    padding: 105px 0 30px;
+    background: url(../img/lase-small.png) 0 0 no-repeat;
+}
+.cons_small {
+    margin: 0 0 0 41px;
+    &:first-child {
+        margin-left: 0;
+    }
+    .cons__wrap {
+        padding: 12px 14px 30px;
+    }
 } 

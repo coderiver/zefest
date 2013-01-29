@@ -1,8 +1,10 @@
+.consultants__wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
 .question__read:after { content: "→"; font-family: 'Conv_MinionPro-Regular'; color: #75922e; font-size: 17px; padding-left: 5px; }
 
 .page-title { overflow: hidden; padding-bottom: 28px; }
 .page-title .title-l-1 { float: left; }
-.page-title .btn, .page-title .select { float: right; }
+.page-title .btn, .page-title .select-wrap { float: right; }
 
 .article { margin-bottom: 28px; padding-bottom: 30px; color: #474747; -webkit-box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); -moz-box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); }
 .article .title-l-2 { padding-bottom: 3px; color: #3375b1; }
@@ -57,7 +59,7 @@
 
 .content-wrap { padding-bottom: 18px; margin-bottom: 25px; -webkit-box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); -moz-box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); }
 
-.content { padding-top: 42px; }
+.content { padding-top: 14px; }
 .content h1 { padding-bottom: 24px; color: #3375b1; font-size: 17px; font-weight: normal; font-family: 'pt_sansbold', sans-serif; line-height: 20px; }
 .content img { float: left; margin-right: 20px; padding: 3px; background: #fff; border: 1px solid #c9d0d1; }
 .content p { margin-bottom: 20px; }
@@ -99,3 +101,22 @@
 .comment-l-2, .comment-l-3 { padding-left: 45px; }
 
 .comment-l-4, .comment-l-5, .comment-l-6 { padding-left: 0; }
+
+.partner { margin-bottom: 20px; padding: 21px 0; background: #fff; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+.partner__logo, .partner__descr, .partner__rate { display: inline-block; vertical-align: middle; }
+
+.partner__logo { margin-right: -4px; text-align: center; width: 121px; }
+.partner__logo img { margin-bottom: -4px; }
+
+.partner__descr { padding-left: 20px; width: 375px; font-size: 14px; line-height: 1.1; font-weight: normal; font-family: 'pt_sansitalic', sans-serif; border-left: 1px solid #c1c5c6; }
+
+.partner__title { margin-bottom: 14px; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 22px; line-height: 20px; }
+
+.partner__rate { width: 95px; text-align: right; font-weight: normal; font-family: 'pt_sansitalic', sans-serif; font-size: 35px; color: #75922e; }
+
+.consultants__wrap { padding: 105px 0 30px; background: url(../img/lase-small.png) 0 0 no-repeat; }
+
+.cons_small { margin: 0 0 0 41px; }
+.cons_small:first-child { margin-left: 0; }
+.cons_small .cons__wrap { padding: 12px 14px 30px; }

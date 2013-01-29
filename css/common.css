@@ -1,4 +1,4 @@
-.wrap:after, .menu:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.wrap:after, .menu:after, .l-cols:after, .select-wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 @font-face { font-family: 'pt_sansregular'; src: url("../fonts/pts55f-webfont.eot"); src: url("../fonts/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/pts55f-webfont.woff") format("woff"), url("../fonts/pts55f-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
@@ -117,7 +117,7 @@ a:hover { text-decoration: none; }
 
 .l-col-3 { float: left; margin-right: 48px; width: 295px; }
 
-.l-cols { overflow: hidden; padding: 30px 0 50px; }
+.l-cols { padding: 30px 0 50px; }
 
 .main-col { float: left; width: 640px; }
 
@@ -269,6 +269,9 @@ a:hover { text-decoration: none; }
 
 .ckeckbox { display: block; margin: -3px 0 15px; color: #666565; font-size: 13px; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 .ckeckbox * { vertical-align: middle; }
+
+.select-wrap label { margin-right: 10px; font-size: 13px; color: #666565; }
+.select-wrap label, .select-wrap .select { display: inline-block; vertical-align: middle; }
 
 .select { position: relative; width: 147px; height: 24px; }
 .select span, .select select { position: absolute; left: 0; top: 0; width: 100%; height: 24px; cursor: pointer; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

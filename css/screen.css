@@ -1,4 +1,4 @@
-.wrap:after, .menu:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.wrap:after, .menu:after, .l-cols:after, .select-wrap:after, .consultants__wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .all-link a:after, .feed__descr:after, .question__read:after { content: "→"; font-family: 'Conv_MinionPro-Regular'; color: #75922e; font-size: 17px; padding-left: 5px; }
 
@@ -121,7 +121,7 @@ a:hover { text-decoration: none; }
 
 .l-col-3 { float: left; margin-right: 48px; width: 295px; }
 
-.l-cols { overflow: hidden; padding: 30px 0 50px; }
+.l-cols { padding: 30px 0 50px; }
 
 .main-col { float: left; width: 640px; }
 
@@ -274,6 +274,9 @@ a:hover { text-decoration: none; }
 .ckeckbox { display: block; margin: -3px 0 15px; color: #666565; font-size: 13px; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
 .ckeckbox * { vertical-align: middle; }
 
+.select-wrap label { margin-right: 10px; font-size: 13px; color: #666565; }
+.select-wrap label, .select-wrap .select { display: inline-block; vertical-align: middle; }
+
 .select { position: relative; width: 147px; height: 24px; }
 .select span, .select select { position: absolute; left: 0; top: 0; width: 100%; height: 24px; cursor: pointer; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .select span { padding-left: 6px; font-size: 13px; line-height: 22px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; border: 1px solid #c1c5c6; border-top: 1px solid #838a8e; background: white url(../img/icons/select.png) 96% 50% no-repeat; }
@@ -323,7 +326,7 @@ a:hover { text-decoration: none; }
 /* -------------------------------------- //END Footer ------------------------------------------- */
 .test { position: absolute; width: 1200px; height: 3000px; left: 50%; margin-left: -600px; top: 0; background: url(../img/test.png) 0 0 no-repeat; opacity: 0.6; z-index: 9000; }
 
-.wrap:after, .menu:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.wrap:after, .menu:after, .l-cols:after, .select-wrap:after, .consultants__wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .all-link a:after, .feed__descr:after, .question__read:after { content: "→"; font-family: 'Conv_MinionPro-Regular'; color: #75922e; font-size: 17px; padding-left: 5px; }
 
@@ -398,7 +401,7 @@ a:hover { text-decoration: none; }
 
 .spec-propose__descr { font-weight: normal; font-family: 'pt_sansitalic', sans-serif; font-size: 15px; }
 
-.wrap:after, .menu:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.wrap:after, .menu:after, .l-cols:after, .select-wrap:after, .consultants__wrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
 .all-link a:after, .feed__descr:after, .question__read:after { content: "→"; font-family: 'Conv_MinionPro-Regular'; color: #75922e; font-size: 17px; padding-left: 5px; }
 
@@ -406,7 +409,7 @@ a:hover { text-decoration: none; }
 
 .page-title { overflow: hidden; padding-bottom: 28px; }
 .page-title .title-l-1 { float: left; }
-.page-title .btn, .page-title .select { float: right; }
+.page-title .btn, .page-title .select-wrap { float: right; }
 
 .article { margin-bottom: 28px; padding-bottom: 30px; color: #474747; -webkit-box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); -moz-box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); }
 .article .title-l-2 { padding-bottom: 3px; color: #3375b1; }
@@ -461,7 +464,7 @@ a:hover { text-decoration: none; }
 
 .content-wrap { padding-bottom: 18px; margin-bottom: 25px; -webkit-box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); -moz-box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); box-shadow: inset 0 -20px 32px -15px rgba(255, 255, 255, 0.8); }
 
-.content { padding-top: 42px; }
+.content { padding-top: 14px; }
 .content h1 { padding-bottom: 24px; color: #3375b1; font-size: 17px; font-weight: normal; font-family: 'pt_sansbold', sans-serif; line-height: 20px; }
 .content img { float: left; margin-right: 20px; padding: 3px; background: #fff; border: 1px solid #c9d0d1; }
 .content p { margin-bottom: 20px; }
@@ -504,8 +507,28 @@ a:hover { text-decoration: none; }
 
 .comment-l-4, .comment-l-5, .comment-l-6 { padding-left: 0; }
 
+.partner { margin-bottom: 20px; padding: 21px 0; background: #fff; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+.partner__logo, .partner__descr, .partner__rate { display: inline-block; vertical-align: middle; }
+
+.partner__logo { margin-right: -4px; text-align: center; width: 121px; }
+.partner__logo img { margin-bottom: -4px; }
+
+.partner__descr { padding-left: 20px; width: 375px; font-size: 14px; line-height: 1.1; font-weight: normal; font-family: 'pt_sansitalic', sans-serif; border-left: 1px solid #c1c5c6; }
+
+.partner__title { margin-bottom: 14px; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 22px; line-height: 20px; }
+
+.partner__rate { width: 95px; text-align: right; font-weight: normal; font-family: 'pt_sansitalic', sans-serif; font-size: 35px; color: #75922e; }
+
+.consultants__wrap { padding: 105px 0 30px; background: url(../img/lase-small.png) 0 0 no-repeat; }
+
+.cons_small { margin: 0 0 0 41px; }
+.cons_small:first-child { margin-left: 0; }
+.cons_small .cons__wrap { padding: 12px 14px 30px; }
+
 .lteie8 .soc-tabs .icon { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50); }
 .lteie8 .soc-tabs .active .icon { filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100); }
+.lteie8 .l-cols { overflow: hidden; }
 
 * + html .icon, * + html .soc a, * + html .cons__badge, * + html .cons__cont a, * + html .nav a span, * + html .exchange__rate, * + html .btn-simple, * + html .scroll-nav a { display: inline; }
 

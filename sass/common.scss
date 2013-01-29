@@ -356,9 +356,9 @@ a{
     width: 295px;
 }
 .l-cols {
-    overflow: hidden;
+    @extend %clr;
     padding: 30px 0 50px;
-}
+} 
 .main-col{
     float: left;
     width: 640px;
@@ -750,7 +750,18 @@ a{
         vertical-align: middle;
     }
 }
-
+.select-wrap {
+    @extend %clr;
+    label {
+        margin-right: 10px;
+        font-size: 13px;
+        color: #666565;
+    }
+    label, .select {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
 .select {
     position: relative;
     width: 147px;
