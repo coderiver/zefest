@@ -92,6 +92,7 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
+    color: #474747;
 	@include pts_r;
     font-size: 15px;
 	line-height: 1.4;
@@ -731,6 +732,7 @@ a{
     textarea {
         resize: vertical;
         padding: 6px;
+        display: block;
     }
 }
 .input_s {
@@ -804,6 +806,7 @@ a{
     @include pts_b;
     text-align: center;
     border: 0;
+    font-size: 13px;
     border-top: 1px solid #b4dbf3;
     border-bottom: 2px solid #3375b1;
     @include border-radius(2px);
@@ -817,10 +820,32 @@ a{
         @include background-image(linear-gradient(#5fa5e5, #73bce9));
     }
 }
+.btn_gray {
+    border-top: 1px solid #b6c1c7;
+    border-bottom: 2px solid #6c757a; 
+    @include box-shadow(0 -1px 0 #d9dfe2);
+    @include background-image(linear-gradient(#b6c1c7, #9ba1a4));
+    &:hover {
+        @include background-image(linear-gradient(#9ba1a4, #b6c1c7));
+    }
+    &:active {
+        border-bottom: 2px solid #b6c1c7;
+        @include background-image(linear-gradient(#9ba1a4, #b6c1c7));
+    }
+}
 .btn_big {
     height: 32px;
     font-size: 16px;
     margin-top: 4px;
+}
+
+.breadcrumbs {
+    a {
+        color: #000;
+    }
+    .separ {
+        padding: 0 3px;
+    }
 }
 
 // popup
@@ -830,7 +855,7 @@ a{
     top: 270px;
     left: 50%;
     z-index: 5000;
-    margin-left: -440px;
+    margin-left: -440px; 
     width: 880px;
     border: 20px solid rgba(0,0,0,0.3);
     @include border-radius(7px)
