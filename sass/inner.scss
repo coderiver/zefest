@@ -379,7 +379,7 @@
 }
 .consultants__wrap {
     @extend %clr;
-    padding: 105px 0 30px;
+    padding: 88px 0 30px;
     background: url(../img/lase-small.png) 0 0 no-repeat;
 }
 .cons_small {
@@ -389,5 +389,52 @@
     }
     .cons__wrap {
         padding: 12px 14px 30px;
+    }
+} 
+
+// programs
+
+.program-wrap {
+    margin-right: -30px;
+}
+.program {
+    display: inline-block;
+    margin: 0 23px 38px 0;
+    vertical-align: top;
+    width: 305px;
+    @include pts_i;
+    li {
+        position: relative;
+        padding-left: 15px;
+        &:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+.program__title {
+    position: relative;
+    margin-bottom: 10px;
+    width: 284px;
+    height: 50px;
+    line-height: 50px; 
+    color: #fff;
+    @include pts_b;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+    background: #abc765;
+    border-top: 1px solid #c5d995; 
+    border-bottom: 4px solid #829d42;
+    @include box-shadow(0 -1px 0 #9ebf4e);
+    &:after {
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: -2px;
+        @include sized-sprite($icons, corner-small);
     }
 } 

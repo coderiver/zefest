@@ -72,14 +72,14 @@ a:hover { text-decoration: none; }
 
 .lang__active { opacity: .4; }
 
-.contact { float: left; padding-top: 7px; color: #666565; font-size: 13px; }
+.header__cont { float: left; padding-top: 7px; color: #666565; font-size: 13px; }
 
-.contact__tel { margin-bottom: 2px; }
-.contact__tel i { float: left; margin-right: 6px; }
-.contact__tel span { display: block; overflow: hidden; }
-.contact__tel strong { display: block; margin: -4px 0; font-size: 18px; font-weight: normal; font-weight: normal; font-family: 'pt_sansbold', sans-serif; color: #000; }
+.header__tel { margin-bottom: 2px; }
+.header__tel i { float: left; margin-right: 6px; }
+.header__tel span { display: block; overflow: hidden; }
+.header__tel strong { display: block; margin: -4px 0; font-size: 18px; font-weight: normal; font-weight: normal; font-family: 'pt_sansbold', sans-serif; color: #000; }
 
-.contact__skype i { margin: 0 2px; vertical-align: middle; }
+.header__skype i { margin: 0 2px; vertical-align: middle; }
 
 .enter-cab { float: right; padding-top: 7px; overflow: hidden; }
 .enter-cab .btn-simple { float: right; margin-left: 6px; }

@@ -190,13 +190,13 @@ a{
 .lang__active {
     opacity: .4;
 }
-.contact {
+.header__cont {
     float: left;
     padding-top: 7px;
     color: #666565;
     font-size: 13px;
 }
-.contact__tel {
+.header__tel {
     margin-bottom: 2px;
     i {
         float: left;
@@ -215,7 +215,7 @@ a{
         color: #000;
     }
 }
-.contact__skype {
+.header__skype {
     i {
         margin: 0 2px;
         vertical-align: middle;

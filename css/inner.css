@@ -41,11 +41,11 @@
 
 .tab { margin-top: 50px; margin-bottom: -23px; }
 .tab span { display: block; position: relative; margin: -22px auto -1px; padding-left: 6px; width: 138px; height: 21px; line-height: 21px; background: #f8f7f7; font-size: 12px; color: #666; border-top: 1px solid #d8d6d6; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
-.tab span:before, .tab span:after { content: ""; position: absolute; top: -1px; right: -12px; background: url('../img/icons-s83909c1603.png') 0 -1077px no-repeat; width: 12px; height: 22px; }
-.tab span:before { left: -12px; background: url('../img/icons-s83909c1603.png') 0 -1045px no-repeat; width: 12px; height: 22px; }
+.tab span:before, .tab span:after { content: ""; position: absolute; top: -1px; right: -12px; background: url('../img/icons-sb004274b51.png') 0 -1143px no-repeat; width: 12px; height: 22px; }
+.tab span:before { left: -12px; background: url('../img/icons-sb004274b51.png') 0 -1111px no-repeat; width: 12px; height: 22px; }
 .tab .active { background: #fff; }
-.tab .active:after { background: url('../img/icons-s83909c1603.png') 0 -981px no-repeat; width: 12px; height: 22px; }
-.tab .active:before { background: url('../img/icons-s83909c1603.png') 0 -1013px no-repeat; width: 12px; height: 22px; }
+.tab .active:after { background: url('../img/icons-sb004274b51.png') 0 -1047px no-repeat; width: 12px; height: 22px; }
+.tab .active:before { background: url('../img/icons-sb004274b51.png') 0 -1079px no-repeat; width: 12px; height: 22px; }
 .tab div { height: 21px; background: #f8f7f7; border: 1px solid #d8d6d6; }
 
 .tab-cont { display: none; position: relative; overflow: hidden; background: #fff; border: 1px solid #d8d6d6; border-top: 0; }
@@ -115,8 +115,17 @@
 
 .partner__rate { width: 95px; text-align: right; font-weight: normal; font-family: 'pt_sansitalic', sans-serif; font-size: 35px; color: #75922e; }
 
-.consultants__wrap { padding: 105px 0 30px; background: url(../img/lase-small.png) 0 0 no-repeat; }
+.consultants__wrap { padding: 88px 0 30px; background: url(../img/lase-small.png) 0 0 no-repeat; }
 
 .cons_small { margin: 0 0 0 41px; }
 .cons_small:first-child { margin-left: 0; }
 .cons_small .cons__wrap { padding: 12px 14px 30px; }
+
+.program-wrap { margin-right: -30px; }
+
+.program { display: inline-block; margin: 0 23px 38px 0; vertical-align: top; width: 305px; font-weight: normal; font-family: 'pt_sansitalic', sans-serif; }
+.program li { position: relative; padding-left: 15px; }
+.program li:before { content: "—"; position: absolute; left: 0; top: 0; }
+
+.program__title { position: relative; margin-bottom: 10px; width: 284px; height: 50px; line-height: 50px; color: #fff; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 18px; text-transform: uppercase; text-align: center; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); background: #abc765; border-top: 1px solid #c5d995; border-bottom: 4px solid #829d42; -webkit-box-shadow: 0 -1px 0 #9ebf4e; -moz-box-shadow: 0 -1px 0 #9ebf4e; box-shadow: 0 -1px 0 #9ebf4e; }
+.program__title:after { content: ""; position: absolute; right: -20px; top: -2px; background: url('../img/icons-sb004274b51.png') 0 -587px no-repeat; width: 20px; height: 56px; }
