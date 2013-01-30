@@ -6,10 +6,16 @@
 	<title>Physical</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/common.js"></script>  
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
     <![endif]-->
+    <script>
+  $(document).ready(function(){
+    
+  });
+  </script>
 </head>
 <body>
 <div class="l-wrapper">
@@ -79,7 +85,7 @@
                     <p>На нашем сайте мы собираем исключительно лучшее, т.е. <a href="#">консультантов</a> высокого уровня, страховые компании, проверенные временем и нами, банки, которые не лопнут, и финансовые институты, которым доверяют наши клиенты и мы. Для Вас мы провели серьезный отбор настоящих партнеров, на которых можно положиться в решении самых разных задач.</p>
                 </article>
                 <div class="form-wrap">
-                    <form>
+                    <form class="phisical-form" >
                         <fieldset class="fieldset">
                             <span class="fieldset__label">Вид страхования</span>
                             <div class="input input_width">
@@ -95,31 +101,31 @@
                         <fieldset class="fieldset">
                             <span class="fieldset__label">Представьтесь<b>*</b></span>
                             <div class="input input_width">
-                                <input type="text">
+                                <input type="text" name="name" class="required">
                             </div>
                         </fieldset>
                         <fieldset class="fieldset">
                             <span class="fieldset__label">Ваш город<b>*</b></span>
                             <div class="input input_width">
-                                <input type="text">
+                                <input type="text" name="city" class="required">
                             </div>
                         </fieldset>
                         <fieldset class="fieldset">
                             <span class="fieldset__label">Мобильный телефон<b>*</b></span>
                             <div class="input input_width">
-                                <input type="text">
+                                <input type="text" name="phone" class="required">
                             </div>
                         </fieldset>
                         <fieldset class="fieldset">
                             <span class="fieldset__label">Стационарный телефон</span>
                             <div class="input input_width">
-                                <input type="text">
+                                <input type="text" class="phone">
                             </div>
                         </fieldset>
                         <fieldset class="fieldset">
                             <span class="fieldset__label">Электронная почта</span>
                             <div class="input input_width">
-                                <input type="text">
+                                <input type="text" name="email">
                             </div>
                         </fieldset>
                         <fieldset class="fieldset">

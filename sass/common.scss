@@ -731,6 +731,7 @@ a{
     }
 }
 .input {
+    position: relative;
     margin-bottom: 15px; 
     label {
         display: block;
@@ -758,6 +759,16 @@ a{
         resize: vertical;
         padding: 6px;
         display: block;
+    }
+    input.error {
+        border: 1px solid #f00;
+    }
+    label.error {
+        position: absolute;
+        top: 5px;
+        right: 6px;
+        font-size: 11px;
+        color: #f00;
     }
 }
 .input_s {
