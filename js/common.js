@@ -1,21 +1,23 @@
 $(document).ready(function() {
-
     //jquery validate
-    $(".phisical-form").validate({
-      onfocusout: false,  
-      onkeyup: false,  
-      onsubmit: false,  
-      onclick: false, 
-      rules: {
-        name : {required : true, minlength: 2},
-        city : {required : true, minlength: 2},
-        email: {email: true},
-        phone: {digits: true, minlength: 2},
-      }
-    });
-    $('.phisical-form input').focusout(function() {  
-      $(this).valid();  
-    }); 
+    if ($(".phisical-form").length > 0) {
+      $(".phisical-form").validate({
+        onfocusout: false,  
+        onkeyup: false,  
+        onsubmit: false,  
+        onclick: false, 
+        rules: {
+          name : {required : true, minlength: 2},
+          city : {required : true, minlength: 2},
+          email: {email: true},
+          phone: {digits: true, minlength: 2},
+        }
+      });
+      $('.phisical-form input').focusout(function() {  
+        $(this).valid();  
+      }); 
+    }
+      
 
     // select
     $(".select span").each(function(){
