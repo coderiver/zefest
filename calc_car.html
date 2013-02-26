@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Partners ship</title>
+	<title>Calculating car</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.validate.js"></script>
@@ -74,14 +74,176 @@
         <div class="l-cols">
             <div class="main-col">
                 <div class="page-title">
-                    <h1 class="title-l-1">Деловое сотрудничество</h1>
+                    <h1 class="title-l-1">Расчет стоимости</h1>
                 </div>
-                <article class="content content_mod">
-                    <p>На нашем сайте мы собираем исключительно лучшее, т.е. консультантов высокого уровня, страховые компании, проверенные временем и нами, банки, которые не лопнут, и финансовые институты, которым доверяют наши клиенты и мы. Для Вас мы провели серьезный отбор настоящих партнеров, на которых можно положиться в решении самых разных задач.</p>
-                    <p>Нам очень интересно все, что связано с развитием и динамикой финансового рынка, как в России, так и за рубежом. За новыми технологиями – будущее, но ничто не заменит общения с друзьями. Стань нашим партнером и обретешь новых друзей.</p>
-                    <p>Мы гарантируем Вам интерес с нашей стороны и поддержку в любых начинаниях. Наши специалисты подскажут Вам выгодные тарифные планы обслуживания и помогут найти решения, которые устроят ваших клиентов.
-                    </p>
-                </article>
+                <ul class="step">
+                    <li class="active"><span>1. Машина</span></li>
+                    <li><span>2. водитель</span></li>
+                    <li><span>3. Результат</span></li>
+                </ul>
+                <div class="form-wrap">
+                    <form class="calc-car-form" >
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Тип транспортного средства<b>*</b></span>
+                            <div class="input input_width">
+                                <label class="radio" for="radio1">
+                                    <input type="radio" id="radio1" name="radio" checked="checked">
+                                    Легковой
+                                </label>
+                                <label class="radio" for="radio2">
+                                    <input type="radio" id="radio2" name="radio">
+                                    Грузовой
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Марка<b>*</b></span>
+                            <div class="input input_width">
+                                <div class="select select_width">
+                                    <span></span>
+                                    <select>
+                                        <option>Cadillac</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Модель<b>*</b></span>
+                            <div class="input input_width">
+                                <div class="select select_width">
+                                    <span></span>
+                                    <select>
+                                        <option>Eldorado</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Год выпуска<b>*</b></span>
+                            <div class="input input_width">
+                                <div class="select select_width">
+                                    <span></span>
+                                    <select>
+                                        <option>1983</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Пробег, км<b>*</b></span>
+                            <div class="input input_width">
+                                <div class="select select_width">
+                                    <span></span>
+                                    <select>
+                                        <option>Новая/без пробега</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Стоимость, руб.<b>*</b></span>
+                            <div class="input input_width">
+                                <input type="text" name="price" class="required">
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Место регистрации<b>*</b></span>
+                            <div class="input input_width">
+                                <div class="select select_width">
+                                    <span></span>
+                                    <select>
+                                        <option>Московская область</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Собственник<b>*</b></span>
+                            <div class="input input_width">
+                                <input type="text" name="owner" class="required">
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Кредит<b>*</b></span>
+                            <div class="input input_width">
+                                <label class="radio" for="radio3">
+                                    <input type="radio" id="radio3" name="radio2" checked="checked">
+                                    Да
+                                </label>
+                                <label class="radio" for="radio4">
+                                    <input type="radio" id="radio4" name="radio2">
+                                    Нет
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Название банка<b>*</b></span>
+                            <div class="input input_width">
+                                <div class="select select_width">
+                                    <span></span>
+                                    <select>
+                                        <option>Альфа банк</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Масса без нагрузки, кг</span>
+                            <div class="input input_width">
+                                <input type="text">
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Сигнализация</span>
+                            <div class="input input_width">
+                                <input type="text">
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Спутниковая ПС (марка/модель)</span>
+                            <div class="input input_width">
+                                <input type="text">
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Иммобилайзер</span>
+                            <div class="input input_width">
+                                <div class="select select_width">
+                                    <span></span>
+                                    <select>
+                                        <option>Штатно</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Электронная сигнализация</span>
+                            <div class="input input_width">
+                                <div class="select select_width">
+                                    <span></span>
+                                    <select>
+                                        <option>Дополнительно</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <span class="fieldset__label">Механическое ПУУ (марка/модель)</span>
+                            <div class="input input_width">
+                                <input type="text">
+                            </div>
+                        </fieldset>
+                        <input class="btn btn_big btn_next-step" type="submit" value="Далее">
+                    </form>
+                </div>
                 <div class="consultants">
                     <div class="consultants__wrap">
                         <div class="cons cons_small">

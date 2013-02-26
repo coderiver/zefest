@@ -559,3 +559,38 @@
         vertical-align: top;
     }
 }
+
+// Calculation pages
+
+.btn_next-step {
+    padding: 0 58px;
+}
+
+.step {
+    overflow: hidden;
+    margin-bottom: 27px;
+    li {
+        float: left;
+        margin-left: -4px;
+        @include pts_b;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        line-height: 63px;
+        text-transform: uppercase;
+        @include sized-sprite($icons, step);
+    }
+    .active {
+        @include sized-sprite($icons, step-act);
+    }
+}
+.driver-field {
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    border-bottom: 1px dashed #fff;
+    .btn_gray {
+        float: none;
+        margin: 0 0 13px 0;
+        height: 24px;
+    }
+}

@@ -3,7 +3,7 @@
 .lteie8 .btn { background: #5fa5e5; }
 .lteie8 .btn_gray { background: #9ba1a4; }
 
-* + html .icon, * + html .soc a, * + html .cons__badge, * + html .cons__cont a, * + html .nav a span, * + html .exchange__rate, * + html .btn-simple, * + html .scroll-nav a, * + html .select, * + html .partner__logo, * + html .partner__descr, * + html .partner__rate, * + html .program { display: inline; }
+* + html .icon, * + html .soc a, * + html .cons__badge, * + html .cons__cont a, * + html .nav a span, * + html .exchange__rate, * + html .btn-simple, * + html .scroll-nav a, * + html .select, * + html .partner__logo, * + html .partner__descr, * + html .partner__rate, * + html .program, * + html .radio { display: inline; }
 * + html .select span { display: none; }
 
 * html .l-col-3 { margin-right: 35px; overflow: hidden; }

@@ -17,7 +17,21 @@ $(document).ready(function() {
         $(this).valid();  
       }); 
     }
-      
+    else if ($(".calc-car-form").length > 0) {
+      $(".calc-car-form").validate({
+        onfocusout: false,  
+        onkeyup: false,  
+        onsubmit: false,  
+        onclick: false, 
+        rules: {
+          price : {required : true, minlength: 2},
+          owner : {required : true, minlength: 2},
+        }
+      });
+      $('.calc-car-form input').focusout(function() {  
+        $(this).valid();  
+      }); 
+    }
 
     // select
     $(".select span").each(function(){

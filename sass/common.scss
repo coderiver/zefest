@@ -88,6 +88,9 @@ table {
     border-spacing: 0;
     border-collapse: collapse;
 }
+label {
+    @include user-select(none);
+}
 *{-webkit-text-size-adjust: none; }
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
@@ -719,12 +722,15 @@ a{
     }
 }
 .fieldset__label {
+    position: relative;
     float: left;
     padding-top: 3px;
     color: #666565;
     font-size: 13px;
     b {
-        padding-left: 3px;
+        position: absolute;
+        top: -5px;
+        right: -11px;
         color: #de1111;
         font-size: 20px;
         font-weight: normal;
@@ -738,6 +744,10 @@ a{
         margin-bottom: 6px;
         color: #666565;
         font-size: 13px;
+    }
+    .radio {
+        display: inline-block;
+        margin: 10px 5px 0 0;
     }
     input, textarea {
         -moz-box-sizing: border-box;
@@ -839,6 +849,16 @@ a{
         background-position: 98% 50%;
     }
     
+}
+
+.radio {
+    display: inline-block;
+    min-width: 107px;
+    input {
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
 }
 
 // buttons
