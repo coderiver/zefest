@@ -53,9 +53,11 @@ a:hover { text-decoration: none; }
 
 .wrapper { overflow: hidden; }
 
-.title-l-1 { color: #303030; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 20px; font-weight: normal; text-transform: uppercase; }
+.title-l-1 { color: #303030; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 20px; font-weight: normal; text-transform: uppercase; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75); }
 
-.title-l-2 { color: #303030; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 17px; font-weight: normal; }
+.title-l-2 { color: #303030; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 17px; font-weight: normal; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75); }
+
+.title-l-2_mod { font-size: 20px; margin-bottom: 20px; }
 
 /* ------------------------------------ //END Main styles --------------------------------------- */
 /* ----------------------------------------- Header --------------------------------------------- */
@@ -230,8 +232,8 @@ a:hover { text-decoration: none; }
 
 .nav { width: 295px; }
 .nav a { position: relative; display: block; padding: 14px 10px 13px 35px; overflow: hidden; color: #fff; background: #85c5ec; border-top: 1px solid #9bd3f6; border-bottom: 1px solid #6aa9d9; text-decoration: none; }
-.nav a:after { content: ""; position: absolute; bottom: -133px; left: 26px; width: 83%; height: 130px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 70px #3e8ccf; -moz-box-shadow: 0 0 70px #3e8ccf; box-shadow: 0 0 70px #3e8ccf; }
-.nav a:hover:after { content: ""; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.nav a:after { content: ""; position: absolute; bottom: -133px; left: 26px; width: 83%; height: 130px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: 0 0 70px #3e8ccf; -moz-box-shadow: 0 0 70px #3e8ccf; box-shadow: 0 0 70px #3e8ccf; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; }
+.nav a:hover:after { content: ""; opacity: 0; }
 .nav a .icon { margin-right: 38px; vertical-align: middle; }
 .nav a span { display: inline-block; vertical-align: middle; width: 175px; font-weight: normal; font-family: 'pt_sansitalic', sans-serif; font-size: 15px; line-height: 1; }
 .nav a span strong { display: block; font-weight: normal; font-family: 'pt_sansbold', sans-serif; font-size: 18px; text-transform: uppercase; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3); }

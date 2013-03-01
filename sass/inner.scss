@@ -8,6 +8,9 @@
     .btn, .select-wrap {
         float: right;
     }
+    .select-wrap {
+        margin-left: 10px;
+    }
 }
 .article {
     margin-bottom: 28px;
@@ -592,5 +595,100 @@
         float: none;
         margin: 0 0 13px 0;
         height: 24px;
+    }
+}
+
+// Products
+.product {
+    padding: 20px 10px 0;
+    @include border-radius(9px);
+    @include box-shadow(0 0 5px rgba(0,0,0,.09));
+    @include background-image(linear-gradient(bottom, #f9f9f9 0%, #f9f9f9 100%));
+}
+.product__head {
+    overflow: hidden;
+    padding-right: 13px;
+    div {
+        float: right;
+        padding-top: 6px;
+    }
+    .btn_gray {
+        margin-left: 6px;
+        padding: 0 15px;
+        height: 24px;
+    }
+}
+.product__title {
+    float: left;
+    @include mp_b;
+    font-style: 22px;
+    a {
+        color: #426fad;
+    }
+}
+
+.company {
+
+}
+.company__logo {
+    float: left; 
+    margin-right: 5px;
+    width: 32px;
+    height: 32px;
+    line-height: 29px;
+    overflow: hidden;
+    vertical-align: middle;
+    border: 1px solid #c1c5c6;
+    background: #fff;
+    text-align: center;
+    img {
+        vertical-align: middle;
+    }
+}
+.company__desc {
+    position: relative;
+    top: -8px;
+    overflow: hidden;
+    a {
+        font-size: 13px;
+    }
+}
+.company__title {
+    @include mp_b;
+    a {
+        font-size: 15px;
+    }
+}
+
+.option {
+    li {
+        display: inline-block;
+        height: 55px;
+        padding-left: 8px;
+        border-left: 1px solid #c1c5c6;
+    }
+    strong {
+        position: relative;
+        top: -5px;
+        display: block;
+        margin-bottom: 2px;
+        color: #474747;
+        font-style: italic;
+        font-weight: normal;
+        text-align: center;
+    }
+    span {
+        display: inline-block;
+        margin-right: 3px;
+        width: 31px;
+        height: 31px;
+        line-height: 25;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #dddfe3;
+        @include border-radius(5px);
+        i {
+            display: inline-block;
+        }
     }
 }

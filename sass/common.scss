@@ -138,12 +138,18 @@ a{
     font-size: 20px;
     font-weight: normal;
     text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(255,255,255,.75);
 }
 .title-l-2 {
     color: #303030;
     @include pts_b; 
     font-size: 17px;
     font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255,255,255,.75);
+}
+.title-l-2_mod {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
@@ -555,11 +561,12 @@ a{
             height: 130px;
             @include border-radius(50%);
             @include box-shadow(0 0 70px rgba(62,140,207,1)); 
+            @include transition(all, .5s, ease-in-out);
         }
         &:hover {
             &:after {
                 content: "";
-                @include box-shadow(none); 
+                opacity: 0;
             }
         }
         .icon {
