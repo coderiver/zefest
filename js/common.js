@@ -10,7 +10,7 @@ $(document).ready(function() {
           name : {required : true, minlength: 2},
           city : {required : true, minlength: 2},
           email: {email: true},
-          phone: {digits: true, minlength: 2},
+          phone: {digits: true, minlength: 2}
         }
       });
       $('.phisical-form input').focusout(function() {  
@@ -25,7 +25,7 @@ $(document).ready(function() {
         onclick: false, 
         rules: {
           price : {required : true, minlength: 2},
-          owner : {required : true, minlength: 2},
+          owner : {required : true, minlength: 2}
         }
       });
       $('.calc-car-form input').focusout(function() {  
@@ -120,18 +120,18 @@ $(document).ready(function() {
          }
        }
      });
-   }
+  }
 
-   // soc tabs
-   $(".soc-tabs li:first").addClass("active");
-   $(".tab-soc-1").show();
-   $(".soc-tabs li").click(function(){
+  // soc tabs
+  $(".soc-tabs li:first").addClass("active");
+  $(".tab-soc-1").show();
+  $(".soc-tabs li").click(function(){
       $(".soc-tabs li").removeClass("active");
       $(this).addClass("active");
       var tab_act = $(this).attr("data-tab");
       $(".soc-plugin").hide();
       $(tab_act).show();
-   });
+  });
 
    // tabs
    $(".tab li:first span").addClass("active");
@@ -147,8 +147,8 @@ $(document).ready(function() {
       $(tab_act).show();
    });
 
-   // show/hide answer
-   $(".js-answer-key").click(function(){
+  // show/hide answer
+  $(".js-answer-key").click(function(){
     if($(this).hasClass("js-active-key")) {
       $(this).text("Читать ответ");
       $(this).removeClass("js-active-key");
@@ -158,6 +158,24 @@ $(document).ready(function() {
       $(this).text("Скрыть ответ");
       $(this).addClass("js-active-key");
       $(this).prev().slideDown("fast");
+    }
+   });
+
+  // show/hide product ddetails
+  $(".product .more").click(function(){
+    if($(this).hasClass("js-active")) {
+      $(this).text("Подробно о продукте");
+      $(this).removeClass("js-active");
+      $(this).prev().slideUp("fast");
+    }
+    else {
+      $(this).text("Скрыть");
+      $(".product .more").removeClass("js-active");
+      $(".product .more").text("Подробно о продукте");
+      $(this).addClass("js-active");
+      $(".details").slideUp();
+      $(this).prev().slideDown("fast");
+      $(this).text("Скрыть");
     }
    });
 });

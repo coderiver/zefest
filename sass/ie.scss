@@ -33,11 +33,23 @@
     .partner__descr,
     .partner__rate,
     .program,
-    .radio  {
+    .radio,
+    .option li,
+    .opt,
+    .opt i,
+    .details div span,
+    {
         display: inline;
     }
     .select span {
         display: none;
+    }
+    .opt i {
+        vertical-align: middle;
+    }
+    .product__head .btn  {
+        padding: 0;
+        width: 90px;
     }
 }
 * html {

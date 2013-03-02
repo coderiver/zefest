@@ -599,14 +599,31 @@
 }
 
 // Products
+.product-group {
+    margin: 35px 0 10px;
+    @include pts_b;
+    font-size: 20px;
+    color: #dd2727;
+}
+.product-group_pop {
+    color: #303030;
+}
 .product {
-    padding: 20px 10px 0;
+    margin-bottom: 20px;
+    padding: 10px 20px 20px;
     @include border-radius(9px);
-    @include box-shadow(0 0 5px rgba(0,0,0,.09));
-    @include background-image(linear-gradient(bottom, #f9f9f9 0%, #f9f9f9 100%));
+    @include box-shadow(0 0 5px rgba(0,0,0,.1));
+    background: #f9f9f9;
+    .more {
+        font-size: 14px;
+        color: #426fad;
+        cursor: pointer;
+        border-bottom: 1px dashed #426fad;
+    }
 }
 .product__head {
     overflow: hidden;
+    margin-bottom: 15px;
     padding-right: 13px;
     div {
         float: right;
@@ -628,7 +645,7 @@
 }
 
 .company {
-
+    margin-bottom: 18px;
 }
 .company__logo {
     float: left; 
@@ -661,34 +678,78 @@
 }
 
 .option {
+    margin-bottom: 14px;
     li {
+        position: relative;
         display: inline-block;
-        height: 55px;
-        padding-left: 8px;
+        height: 33px;
+        padding: 22px 0 0 8px;
         border-left: 1px solid #c1c5c6;
+        vertical-align: top;
     }
     strong {
-        position: relative;
+        position: absolute;
         top: -5px;
-        display: block;
+        left: 0;
+        width: 100%;
         margin-bottom: 2px;
         color: #474747;
-        font-style: italic;
-        font-weight: normal;
+        @include pts_i;
         text-align: center;
     }
-    span {
+}
+.opt {
+    display: inline-block;
+    margin-right: 3px;
+    width: 31px;
+    height: 31px;
+    line-height: 33px;
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #dddfe3;
+    @include border-radius(5px);
+    i {
         display: inline-block;
-        margin-right: 3px;
-        width: 31px;
-        height: 31px;
-        line-height: 25;
-        text-align: center;
-        background: #fff;
-        border: 1px solid #dddfe3;
-        @include border-radius(5px);
-        i {
+        @include sized-sprite($icons, icon);
+    }
+}
+.opt_1 {
+    i {
+        @include sized-sprite($icons, icon);
+    }
+}
+
+.details {
+    display: none;
+    margin: 20px 0 14px;
+    padding: 20px 0 13px;
+    border-top: 1px dashed #c1c5c6;
+    border-bottom: 1px dashed #c1c5c6;
+    li {
+        margin-bottom: 7px;
+        font-size: 14px;
+        @include pts_i;
+        line-height: 1.1;
+        overflow: hidden;
+    }
+    div {
+        overflow: hidden;
+        line-height: 33px;
+        span {
             display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
         }
+    }
+    .opt {
+        float: left;
+        margin-right: 10px;
+        cursor: default;
+    }
+}
+.opt_det1 {
+    i {
+        @include sized-sprite($icons, det1);
     }
 }
